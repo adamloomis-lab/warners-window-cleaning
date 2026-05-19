@@ -1,7 +1,10 @@
 import { useEffect } from "react";
 import { useParams, useLocation } from "wouter";
+import { Helmet } from "react-helmet-async";
 import { getCityBySlug, cities } from "@/data/cityData";
 import { Phone, Mail, MapPin, CheckCircle, ArrowRight, ChevronLeft } from "lucide-react";
+
+const SITE_URL = "https://www.warnerswindowcleaning.com";
 
 // TODO: Replace placeholder — original CDN ref was https://d2xsxph8kpxj0f.cloudfront.net/310519663307809653/aMdhJxAWUBqNrWQUiC9c7J/warners-logo_cc629939.webp
 const LOGO_URL =
@@ -70,8 +73,46 @@ export default function CityPage() {
     );
   }
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    name: "Warner's Window Cleaning",
+    description: city.metaDescription,
+    image: `${SITE_URL}/images/warners-logo-placeholder.svg`,
+    telephone: "+1-330-203-1654",
+    email: "info@warnerswindowcleaning.com",
+    url: `${SITE_URL}/window-cleaning/${city.slug}`,
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "350 State Street Bldg 2B",
+      addressLocality: "Wadsworth",
+      addressRegion: "OH",
+      postalCode: "44281",
+      addressCountry: "US",
+    },
+    areaServed: {
+      "@type": "City",
+      name: city.name,
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: city.name,
+        addressRegion: "OH",
+        postalCode: city.zip,
+        addressCountry: "US",
+      },
+    },
+    priceRange: "$$",
+    foundingDate: "1975",
+  };
+
   return (
     <div className="min-h-screen flex flex-col bg-white">
+      <Helmet>
+        <title>{city.metaTitle}</title>
+        <meta name="description" content={city.metaDescription} />
+        <link rel="canonical" href={`${SITE_URL}/window-cleaning/${city.slug}`} />
+        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+      </Helmet>
       {/* Header */}
       <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm">
         <div className="container flex items-center justify-between py-3">

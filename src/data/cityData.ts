@@ -32,24 +32,6 @@ export const cities: CityData[] = [
       "Our office is located at 350 State Street Bldg 2B, right here in Wadsworth. We are proud members of the local business community.",
   },
   {
-    name: "Akron",
-    slug: "akron-oh",
-    county: "Summit County",
-    zip: "44301",
-    metaTitle: "Window Cleaning in Akron, OH | Warner's Window Cleaning",
-    metaDescription:
-      "Professional window cleaning services in Akron, Ohio. Residential and commercial. Family owned since 1975. Call (330) 203-1654 for a free estimate.",
-    heroHeadline: "Professional Window Cleaning in Akron, Ohio",
-    heroSubtext:
-      "From Highland Square to Firestone Park, we bring over 50 years of experience to every Akron home and business.",
-    intro:
-      "Warner's Window Cleaning proudly serves homeowners and businesses across Akron and the greater Summit County area. Whether you need interior and exterior window cleaning for your home or regular maintenance for your commercial property, our experienced team delivers reliable, high-quality results.",
-    whyUs:
-      "Akron's mix of historic homes, modern developments, and bustling commercial districts means every job is different. We bring the right tools and techniques for every type of window, from century-old leaded glass to floor-to-ceiling commercial panels.",
-    localNote:
-      "We regularly serve neighborhoods throughout Akron including Highland Square, West Akron, Ellet, Firestone Park, and the downtown business district.",
-  },
-  {
     name: "Medina",
     slug: "medina-oh",
     county: "Medina County",
@@ -66,24 +48,6 @@ export const cities: CityData[] = [
       "Medina's beautiful downtown district and well-maintained residential neighborhoods deserve windows that match. Our team takes care to protect your property while delivering the kind of results that make your home or business stand out.",
     localNote:
       "We are just a short drive from Medina's town square and serve customers throughout Medina County on a regular basis.",
-  },
-  {
-    name: "Fairlawn",
-    slug: "fairlawn-oh",
-    county: "Summit County",
-    zip: "44333",
-    metaTitle: "Window Cleaning in Fairlawn, OH | Warner's Window Cleaning",
-    metaDescription:
-      "Expert window cleaning in Fairlawn, Ohio. Residential and commercial. Family owned since 1975. Call (330) 203-1654 for your free estimate.",
-    heroHeadline: "Window Cleaning Services in Fairlawn, Ohio",
-    heroSubtext:
-      "Professional, reliable window cleaning for Fairlawn homes and businesses. Over 50 years of trusted service.",
-    intro:
-      "Fairlawn homeowners and business owners trust Warner's Window Cleaning for dependable, professional service. Located just minutes away, we provide prompt scheduling and thorough cleaning for properties of all sizes throughout the Fairlawn area.",
-    whyUs:
-      "Fairlawn's mix of upscale residences and busy commercial corridors along West Market Street means your windows need to look their best. We deliver the kind of detail-oriented service that matches the quality of the community.",
-    localNote:
-      "We serve residential and commercial customers throughout Fairlawn, including properties along West Market Street, Ghent Road, and surrounding neighborhoods.",
   },
   {
     name: "Barberton",
@@ -121,23 +85,118 @@ export const cities: CityData[] = [
     localNote:
       "We serve customers throughout Norton and the surrounding area, including properties near Wadsworth Road and Cleveland-Massillon Road.",
   },
+  // FLAG FOR REVIEW: new city copy — drafted by AI, owner to confirm details
   {
-    name: "Strongsville",
-    slug: "strongsville-oh",
-    county: "Cuyahoga County",
-    zip: "44136",
-    metaTitle: "Window Cleaning in Strongsville, OH | Warner's Window Cleaning",
+    name: "Rittman",
+    slug: "rittman-oh",
+    county: "Wayne County",
+    zip: "44270",
+    metaTitle: "Window Cleaning in Rittman, OH | Warner's Window Cleaning",
     metaDescription:
-      "Professional window cleaning in Strongsville, Ohio. Residential and commercial. Family owned since 1975. Call (330) 203-1654.",
-    heroHeadline: "Strongsville Window Cleaning Professionals",
+      "Professional window cleaning in Rittman, Ohio. Residential and commercial. Family owned since 1975. Call (330) 203-1654 for a free estimate.",
+    heroHeadline: "Rittman's Friendly Window Cleaning Service",
     heroSubtext:
-      "Bringing over 50 years of window cleaning expertise to Strongsville homes and businesses.",
+      "Honest, careful window cleaning for Rittman homes and businesses. A short drive from our Wadsworth shop.",
     intro:
-      "Warner's Window Cleaning extends our trusted service to Strongsville and the surrounding Cuyahoga County area. From the beautiful homes near the Metroparks to the commercial properties along Pearl Road, we deliver the same quality and reliability that has defined our business since 1975.",
+      "Rittman has been part of Warner's Window Cleaning's regular service area for years. Whether you live in one of Rittman's quiet residential streets or run a business along Ohio Street, we bring the same family-owned care to every job that has defined our work since 1975.",
     whyUs:
-      "Strongsville's well-kept homes and thriving business community set a high standard. Our team meets that standard with careful attention to detail, professional equipment, and a commitment to leaving every window crystal clear.",
+      "Rittman's small-town feel and hardworking residents deserve a window cleaning company that treats people the right way. We show up on time, do thorough work, and leave the place better than we found it.",
     localNote:
-      "We serve residential and commercial customers throughout Strongsville, including neighborhoods near SouthPark Mall, Royalton Road, and Pearl Road corridors.",
+      "We are just a short drive south of Wadsworth and serve customers throughout Rittman and the surrounding Wayne County area.",
+  },
+  // FLAG FOR REVIEW: new city copy — drafted by AI, owner to confirm details
+  {
+    name: "Seville",
+    slug: "seville-oh",
+    county: "Medina County",
+    zip: "44273",
+    metaTitle: "Window Cleaning in Seville, OH | Warner's Window Cleaning",
+    metaDescription:
+      "Trusted window cleaning in Seville, Ohio. Residential and commercial service from a family-owned company since 1975. Call (330) 203-1654.",
+    heroHeadline: "Seville Window Cleaning You Can Trust",
+    heroSubtext:
+      "Friendly, professional window cleaning for Seville homes and businesses. Family owned since 1975.",
+    intro:
+      "Warner's Window Cleaning is proud to serve the village of Seville and the surrounding southern Medina County area. From the homes along Seville's historic streets to businesses near the I-71 corridor, our team handles every window with the same care.",
+    whyUs:
+      "Seville's tight-knit community appreciates dependable local businesses, and that is exactly what we have been for over 50 years. We treat your property like it is our own and never leave a job until you are happy with it.",
+    localNote:
+      "We are a quick drive from Seville and regularly serve homeowners and businesses throughout southern Medina County.",
+  },
+  // FLAG FOR REVIEW: new city copy — drafted by AI, owner to confirm details
+  {
+    name: "Doylestown",
+    slug: "doylestown-oh",
+    county: "Wayne County",
+    zip: "44230",
+    metaTitle: "Window Cleaning in Doylestown, OH | Warner's Window Cleaning",
+    metaDescription:
+      "Professional window cleaning in Doylestown, Ohio. Residential and commercial. Family owned since 1975. Call (330) 203-1654 for a free estimate.",
+    heroHeadline: "Doylestown's Local Window Cleaning Pros",
+    heroSubtext:
+      "Careful, reliable window cleaning for Doylestown homes and businesses, just down the road from Wadsworth.",
+    intro:
+      "Doylestown homeowners and business owners trust Warner's Window Cleaning for thorough, professional service. We have been cleaning windows across northern Wayne County for decades, and Doylestown is part of our regular route every season.",
+    whyUs:
+      "Doylestown's friendly, community-minded atmosphere is the kind of place we love working in. We bring careful work, fair prices, and the same family-owned reliability that has kept our customers calling back for over 50 years.",
+    localNote:
+      "We serve homes and businesses throughout Doylestown and the surrounding northern Wayne County area, with prompt scheduling and dependable service.",
+  },
+  {
+    name: "Akron",
+    slug: "akron-oh",
+    county: "Summit County",
+    zip: "44301",
+    metaTitle: "Window Cleaning in Akron, OH | Warner's Window Cleaning",
+    metaDescription:
+      "Professional window cleaning services in Akron, Ohio. Residential and commercial. Family owned since 1975. Call (330) 203-1654 for a free estimate.",
+    heroHeadline: "Professional Window Cleaning in Akron, Ohio",
+    heroSubtext:
+      "From Highland Square to Firestone Park, we bring over 50 years of experience to every Akron home and business.",
+    intro:
+      "Warner's Window Cleaning proudly serves homeowners and businesses across Akron and the greater Summit County area. Whether you need interior and exterior window cleaning for your home or regular maintenance for your commercial property, our experienced team delivers reliable, high-quality results.",
+    whyUs:
+      "Akron's mix of historic homes, modern developments, and bustling commercial districts means every job is different. We bring the right tools and techniques for every type of window, from century-old leaded glass to floor-to-ceiling commercial panels.",
+    localNote:
+      "We regularly serve neighborhoods throughout Akron including Highland Square, West Akron, Ellet, Firestone Park, and the downtown business district.",
+  },
+  // FLAG FOR REVIEW: new city copy — drafted by AI, owner to confirm details
+  {
+    name: "Richfield",
+    slug: "richfield-oh",
+    county: "Summit County",
+    zip: "44286",
+    metaTitle: "Window Cleaning in Richfield, OH | Warner's Window Cleaning",
+    metaDescription:
+      "Premium window cleaning in Richfield, Ohio. Residential and commercial. Family owned since 1975. Call (330) 203-1654 for a free estimate.",
+    heroHeadline: "Richfield Window Cleaning Specialists",
+    heroSubtext:
+      "Detail-oriented window cleaning for Richfield's beautiful homes and commercial properties. Over 50 years of trusted service.",
+    intro:
+      "Richfield's stately homes and well-kept commercial properties deserve a window cleaning team that takes the work seriously. Warner's Window Cleaning has been delivering that kind of service across Summit County since 1975, and Richfield is one of our most-loved service areas.",
+    whyUs:
+      "Richfield property owners take real pride in their homes, and our team matches that pride with careful, methodical work. We handle high windows, custom glass, and tall transoms with the right equipment and the right approach every time.",
+    localNote:
+      "We serve homes and businesses throughout Richfield, including properties near the Cuyahoga Valley and along Brecksville Road.",
+  },
+  // FLAG FOR REVIEW: new city copy — drafted by AI, owner to confirm details
+  {
+    name: "Bath",
+    slug: "bath-oh",
+    county: "Summit County",
+    zip: "44210",
+    metaTitle: "Window Cleaning in Bath, OH | Warner's Window Cleaning",
+    metaDescription:
+      "Professional window cleaning in Bath, Ohio. Residential and commercial. Family owned since 1975. Call (330) 203-1654 for a free estimate.",
+    heroHeadline: "Bath Township Window Cleaning Professionals",
+    heroSubtext:
+      "Premium window cleaning for Bath's beautiful homes and estates. Family owned, detail-focused since 1975.",
+    intro:
+      "Bath Township is home to some of Summit County's most beautiful properties, and Warner's Window Cleaning is honored to serve them. From large estate homes to family residences, we bring over 50 years of experience to every window, large or small.",
+    whyUs:
+      "Bath homeowners expect work that lives up to the quality of their properties. Our team delivers that with high-end equipment, careful handling of expensive glass and trim, and a level of detail that you can see in every pane.",
+    localNote:
+      "We serve homes and businesses throughout Bath Township, including properties along Cleveland-Massillon Road, Ira Road, and the surrounding area.",
   },
   {
     name: "Brunswick",
@@ -157,23 +216,42 @@ export const cities: CityData[] = [
     localNote:
       "We serve customers throughout Brunswick and neighboring communities in Medina County, with easy scheduling and prompt service.",
   },
+  // FLAG FOR REVIEW: new city copy — drafted by AI, owner to confirm details
   {
-    name: "Orrville",
-    slug: "orrville-oh",
-    county: "Wayne County",
-    zip: "44667",
-    metaTitle: "Window Cleaning in Orrville, OH | Warner's Window Cleaning",
+    name: "Copley",
+    slug: "copley-oh",
+    county: "Summit County",
+    zip: "44321",
+    metaTitle: "Window Cleaning in Copley, OH | Warner's Window Cleaning",
     metaDescription:
-      "Professional window cleaning in Orrville, Ohio. Residential and commercial. Family owned since 1975. Call (330) 203-1654 for a free estimate.",
-    heroHeadline: "Orrville's Professional Window Cleaning Service",
+      "Professional window cleaning in Copley, Ohio. Residential and commercial. Family owned since 1975. Call (330) 203-1654 for a free estimate.",
+    heroHeadline: "Copley Window Cleaning You Can Rely On",
     heroSubtext:
-      "Reliable, friendly window cleaning for Orrville homes and businesses. Serving Wayne County with care.",
+      "Honest, careful window cleaning for Copley homes and businesses. A trusted name across Summit County since 1975.",
     intro:
-      "Warner's Window Cleaning is proud to extend our services to Orrville and the Wayne County area. Known for its strong sense of community and well-maintained properties, Orrville is the kind of place where quality work is appreciated, and that is exactly what we deliver.",
+      "Copley is a community of well-kept homes and growing local businesses, and Warner's Window Cleaning has been part of its window-cleaning rotation for many years. Our team works across Copley Township weekly, and we know the area's homes and storefronts well.",
     whyUs:
-      "Orrville's charming downtown, local businesses, and residential neighborhoods all benefit from clean, well-maintained windows. Our team brings professional equipment and decades of experience to every job, large or small.",
+      "Copley residents value local businesses that show up, do good work, and stand behind it. That is the kind of company we have been for over 50 years, and it is why our customers keep recommending us to neighbors.",
     localNote:
-      "We serve residential and commercial customers in Orrville and surrounding Wayne County communities, with flexible scheduling to fit your needs.",
+      "We serve homes and businesses throughout Copley Township, including neighborhoods near Copley Road, Cleveland-Massillon Road, and Ridgewood Road.",
+  },
+  {
+    name: "Fairlawn",
+    slug: "fairlawn-oh",
+    county: "Summit County",
+    zip: "44333",
+    metaTitle: "Window Cleaning in Fairlawn, OH | Warner's Window Cleaning",
+    metaDescription:
+      "Expert window cleaning in Fairlawn, Ohio. Residential and commercial. Family owned since 1975. Call (330) 203-1654 for your free estimate.",
+    heroHeadline: "Window Cleaning Services in Fairlawn, Ohio",
+    heroSubtext:
+      "Professional, reliable window cleaning for Fairlawn homes and businesses. Over 50 years of trusted service.",
+    intro:
+      "Fairlawn homeowners and business owners trust Warner's Window Cleaning for dependable, professional service. Located just minutes away, we provide prompt scheduling and thorough cleaning for properties of all sizes throughout the Fairlawn area.",
+    whyUs:
+      "Fairlawn's mix of upscale residences and busy commercial corridors along West Market Street means your windows need to look their best. We deliver the kind of detail-oriented service that matches the quality of the community.",
+    localNote:
+      "We serve residential and commercial customers throughout Fairlawn, including properties along West Market Street, Ghent Road, and surrounding neighborhoods.",
   },
 ];
 

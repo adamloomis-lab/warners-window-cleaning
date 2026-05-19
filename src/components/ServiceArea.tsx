@@ -1,32 +1,9 @@
 import { MapPin } from "lucide-react";
 import { useScrollReveal, useStaggerReveal } from "@/hooks/useScrollReveal";
 import { useLocation } from "wouter";
+import { cities } from "@/data/cityData";
 
 const BG_IMG = "/images/photo5.jpg";
-
-const areas = [
-  "Wadsworth",
-  "Akron",
-  "Medina",
-  "Fairlawn",
-  "Barberton",
-  "Norton",
-  "Strongsville",
-  "Brunswick",
-  "Orrville",
-];
-
-const slugMap: Record<string, string> = {
-  Wadsworth: "wadsworth-oh",
-  Akron: "akron-oh",
-  Medina: "medina-oh",
-  Fairlawn: "fairlawn-oh",
-  Barberton: "barberton-oh",
-  Norton: "norton-oh",
-  Strongsville: "strongsville-oh",
-  Brunswick: "brunswick-oh",
-  Orrville: "orrville-oh",
-};
 
 export default function ServiceArea() {
   const { ref } = useScrollReveal();
@@ -59,22 +36,22 @@ export default function ServiceArea() {
         <p className="text-xl text-white/85 max-w-3xl mx-auto leading-relaxed">
           Proudly serving{" "}
           <span className="font-semibold text-[#4A90D9]">
-            {areas.join(", ")}
+            {cities.map((c) => c.name).join(", ")}
           </span>
           , and surrounding communities throughout Northeast Ohio.
         </p>
         <div ref={tagsRef} className="mt-10 flex flex-wrap justify-center gap-3">
-          {areas.map((area) => (
+          {cities.map((city) => (
             <a
-              key={area}
-              href={`/window-cleaning/${slugMap[area]}`}
+              key={city.slug}
+              href={`/window-cleaning/${city.slug}`}
               onClick={(e) => {
                 e.preventDefault();
-                setLocation(`/window-cleaning/${slugMap[area]}`);
+                setLocation(`/window-cleaning/${city.slug}`);
               }}
               className="px-5 py-2.5 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-white text-sm font-medium hover:bg-[#4A90D9]/30 hover:border-[#4A90D9]/50 transition-all duration-300 cursor-pointer"
             >
-              {area}, OH
+              {city.name}, OH
             </a>
           ))}
         </div>

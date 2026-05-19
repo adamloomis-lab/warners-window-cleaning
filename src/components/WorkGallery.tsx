@@ -80,7 +80,7 @@ const galleryImages = [
   },
   {
     src: "/images/storefront1.jpg",
-    alt: "Orrville commercial storefront with freshly cleaned windows and signage",
+    alt: "Local commercial storefront with freshly cleaned windows and signage",
     label: "Commercial",
   },
   {
