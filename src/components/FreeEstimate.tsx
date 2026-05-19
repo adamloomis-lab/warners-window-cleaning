@@ -1,47 +1,80 @@
-import { useState, type FormEvent } from "react";
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
 import { Phone, Mail, Send, CheckCircle } from "lucide-react";
 import { toast } from "sonner";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
-// TODO Phase 5: replace this stubbed mutation with Netlify Forms submission
-const submitMutationStub = {
-  isPending: false,
-  mutate: (_data: Record<string, string>) => {},
-};
 
-/*
-  FREE ESTIMATE — Contact form + info cards.
-  Submits via tRPC to notifyOwner for email forwarding.
-  Shows personalized thank-you message on success.
-*/
+const FORM_NAME = "estimate-request";
+
+const schema = z.object({
+  name: z.string().trim().min(1, "Please enter your name"),
+  phone: z
+    .string()
+    .trim()
+    .min(7, "Please enter a valid phone number"),
+  email: z.string().trim().min(1, "Email is required").email("Please enter a valid email address"),
+  address: z.string().trim().min(1, "Street address is required"),
+  message: z.string().trim().min(1, "Please tell us a bit about what you need"),
+  "bot-field": z.string().optional(),
+});
+
+type FormValues = z.infer<typeof schema>;
+
+const encode = (data: Record<string, string>) =>
+  Object.keys(data)
+    .map((k) => encodeURIComponent(k) + "=" + encodeURIComponent(data[k]))
+    .join("&");
+
+const inputClass =
+  "w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#4A90D9] focus:ring-2 focus:ring-[#4A90D9]/20 outline-none transition-all text-[#333333] bg-gray-50/50 focus:bg-white text-base";
+const inputErrorClass =
+  "w-full px-4 py-3 rounded-xl border border-red-400 focus:border-red-500 focus:ring-2 focus:ring-red-200 outline-none transition-all text-[#333333] bg-red-50/40 focus:bg-white text-base";
 
 export default function FreeEstimate() {
-  const [formData, setFormData] = useState({
-    name: "",
-    phone: "",
-    email: "",
-    address: "",
-    message: "",
-  });
   const [submitted, setSubmitted] = useState(false);
   const [submittedName, setSubmittedName] = useState("");
   const { ref: leftRef } = useScrollReveal();
   const { ref: rightRef } = useScrollReveal();
 
-  const submitMutation = submitMutationStub;
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors, isSubmitting },
+  } = useForm<FormValues>({
+    resolver: zodResolver(schema),
+    mode: "onBlur",
+  });
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
-  };
-
-  const handleSubmit = (e: FormEvent) => {
-    e.preventDefault();
-    toast.message("Form submission is being rewired in Phase 5.");
-    setSubmittedName(formData.name);
-    setSubmitted(true);
-    setFormData({ name: "", phone: "", email: "", address: "", message: "" });
-    submitMutation.mutate(formData);
+  const onSubmit = async (data: FormValues) => {
+    try {
+      const res = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode({
+          "form-name": FORM_NAME,
+          name: data.name,
+          phone: data.phone,
+          email: data.email,
+          address: data.address,
+          message: data.message,
+          "bot-field": data["bot-field"] ?? "",
+        }),
+      });
+      if (!res.ok) throw new Error(`Submission failed (${res.status})`);
+      setSubmittedName(data.name);
+      setSubmitted(true);
+      reset();
+      toast.success("Your estimate request was sent. We'll be in touch within 24 hours.");
+    } catch (err) {
+      toast.error(
+        err instanceof Error
+          ? err.message
+          : "Something went wrong. Please try again or call us directly.",
+      );
+    }
   };
 
   return (
@@ -64,7 +97,6 @@ export default function FreeEstimate() {
             </p>
 
             <div className="space-y-4">
-              {/* Phone card */}
               <a
                 href="tel:3302031654"
                 className="flex items-center gap-4 group p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-0.5 min-w-0"
@@ -78,7 +110,6 @@ export default function FreeEstimate() {
                 </div>
               </a>
 
-              {/* Email card */}
               <a
                 href="mailto:info@warnerswindowcleaning.com"
                 className="flex items-center gap-4 group p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-0.5 min-w-0"
@@ -100,7 +131,6 @@ export default function FreeEstimate() {
           <div ref={rightRef} className="min-w-0">
             <div className="bg-white rounded-2xl shadow-lg shadow-[#0F2D4A]/8 p-5 sm:p-6 md:p-8 border border-gray-100/80">
               {submitted ? (
-                /* Personalized Thank You */
                 <div className="text-center py-8">
                   <div className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mx-auto mb-5">
                     <CheckCircle className="w-8 h-8 text-green-600" />
@@ -127,22 +157,40 @@ export default function FreeEstimate() {
                   </button>
                 </div>
               ) : (
-                /* Form */
-                <form onSubmit={handleSubmit} className="space-y-5">
+                <form
+                  name={FORM_NAME}
+                  method="POST"
+                  data-netlify="true"
+                  data-netlify-honeypot="bot-field"
+                  onSubmit={handleSubmit(onSubmit)}
+                  className="space-y-5"
+                  noValidate
+                >
+                  {/* Netlify Forms identifier */}
+                  <input type="hidden" name="form-name" value={FORM_NAME} />
+                  {/* Honeypot — hidden from real users */}
+                  <p className="hidden">
+                    <label>
+                      Don't fill this out: <input {...register("bot-field")} />
+                    </label>
+                  </p>
+
                   <div>
                     <label htmlFor="name" className="block text-sm font-semibold text-[#0F2D4A] mb-1.5">
                       Name <span className="text-red-500">*</span>
                     </label>
                     <input
-                      type="text"
                       id="name"
-                      name="name"
-                      required
-                      value={formData.name}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#4A90D9] focus:ring-2 focus:ring-[#4A90D9]/20 outline-none transition-all text-[#333333] bg-gray-50/50 focus:bg-white text-base"
+                      type="text"
+                      autoComplete="name"
                       placeholder="Your full name"
+                      aria-invalid={!!errors.name}
+                      className={errors.name ? inputErrorClass : inputClass}
+                      {...register("name")}
                     />
+                    {errors.name && (
+                      <p className="mt-1.5 text-sm text-red-600">{errors.name.message}</p>
+                    )}
                   </div>
 
                   <div className="grid sm:grid-cols-2 gap-4 sm:gap-5">
@@ -151,69 +199,79 @@ export default function FreeEstimate() {
                         Phone <span className="text-red-500">*</span>
                       </label>
                       <input
-                        type="tel"
                         id="phone"
-                        name="phone"
-                        required
-                        value={formData.phone}
-                        onChange={handleChange}
-                        className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#4A90D9] focus:ring-2 focus:ring-[#4A90D9]/20 outline-none transition-all text-[#333333] bg-gray-50/50 focus:bg-white text-base"
+                        type="tel"
+                        autoComplete="tel"
                         placeholder="(330) 000-0000"
+                        aria-invalid={!!errors.phone}
+                        className={errors.phone ? inputErrorClass : inputClass}
+                        {...register("phone")}
                       />
+                      {errors.phone && (
+                        <p className="mt-1.5 text-sm text-red-600">{errors.phone.message}</p>
+                      )}
                     </div>
                     <div>
                       <label htmlFor="email" className="block text-sm font-semibold text-[#0F2D4A] mb-1.5">
-                        Email
+                        Email <span className="text-red-500">*</span>
                       </label>
                       <input
-                        type="email"
                         id="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#4A90D9] focus:ring-2 focus:ring-[#4A90D9]/20 outline-none transition-all text-[#333333] bg-gray-50/50 focus:bg-white text-base"
+                        type="email"
+                        autoComplete="email"
                         placeholder="you@email.com"
+                        aria-invalid={!!errors.email}
+                        className={errors.email ? inputErrorClass : inputClass}
+                        {...register("email")}
                       />
+                      {errors.email && (
+                        <p className="mt-1.5 text-sm text-red-600">{errors.email.message}</p>
+                      )}
                     </div>
                   </div>
 
                   <div>
                     <label htmlFor="address" className="block text-sm font-semibold text-[#0F2D4A] mb-1.5">
-                      Address
+                      Street Address <span className="text-red-500">*</span>
                     </label>
                     <input
-                      type="text"
                       id="address"
-                      name="address"
-                      value={formData.address}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#4A90D9] focus:ring-2 focus:ring-[#4A90D9]/20 outline-none transition-all text-[#333333] bg-gray-50/50 focus:bg-white text-base"
+                      type="text"
+                      autoComplete="street-address"
                       placeholder="Your street address"
+                      aria-invalid={!!errors.address}
+                      className={errors.address ? inputErrorClass : inputClass}
+                      {...register("address")}
                     />
+                    {errors.address && (
+                      <p className="mt-1.5 text-sm text-red-600">{errors.address.message}</p>
+                    )}
                   </div>
 
                   <div>
                     <label htmlFor="message" className="block text-sm font-semibold text-[#0F2D4A] mb-1.5">
-                      Message
+                      Message <span className="text-red-500">*</span>
                     </label>
                     <textarea
                       id="message"
-                      name="message"
                       rows={4}
-                      value={formData.message}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#4A90D9] focus:ring-2 focus:ring-[#4A90D9]/20 outline-none transition-all text-[#333333] resize-none bg-gray-50/50 focus:bg-white text-base"
-                      placeholder="Tell us about your windows — how many, type of building, etc."
+                      placeholder="Tell us about what services you are interested in exterior and/or interior window cleaning, screen cleaning, skylights, etc."
+                      aria-invalid={!!errors.message}
+                      className={`${errors.message ? inputErrorClass : inputClass} resize-none`}
+                      {...register("message")}
                     />
+                    {errors.message && (
+                      <p className="mt-1.5 text-sm text-red-600">{errors.message.message}</p>
+                    )}
                   </div>
 
                   <button
                     type="submit"
-                    disabled={submitMutation.isPending}
+                    disabled={isSubmitting}
                     className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-[#4A90D9] text-white font-bold rounded-xl hover:bg-[#3a7bc8] transition-all disabled:opacity-60 disabled:cursor-not-allowed text-base shadow-lg shadow-[#4A90D9]/25 hover:shadow-[#4A90D9]/40 hover:-translate-y-0.5"
                   >
                     <Send className="w-4 h-4" />
-                    {submitMutation.isPending ? "Sending..." : "Request My Free Estimate"}
+                    {isSubmitting ? "Sending..." : "Request My Free Estimate"}
                   </button>
                 </form>
               )}

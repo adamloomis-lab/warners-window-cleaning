@@ -15,12 +15,12 @@
     <script type="module" src="/src/main.tsx"></script>
 
     <!-- Netlify Forms detection (hidden, SPA pattern) -->
-    <form name="estimate-request" netlify netlify-honeypot="bot-field" hidden>
+    <!-- Field set must match the React form in src/components/FreeEstimate.tsx -->
+    <form name="estimate-request" data-netlify="true" netlify-honeypot="bot-field" hidden>
       <input type="text" name="name" />
-      <input type="email" name="email" />
       <input type="tel" name="phone" />
+      <input type="email" name="email" />
       <input type="text" name="address" />
-      <input type="text" name="city" />
       <textarea name="message"></textarea>
       <input type="text" name="bot-field" />
     </form>
