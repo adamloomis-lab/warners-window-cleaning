@@ -8,6 +8,16 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const FORM_NAME = "estimate-request";
 
+const SERVICE_OPTIONS = [
+  "Exterior window cleaning",
+  "Interior window cleaning",
+  "Exterior + interior window cleaning",
+  "Screen cleaning",
+  "Skylight cleaning",
+  "Multiple services (describe below)",
+  "Not sure yet — please advise",
+] as const;
+
 const schema = z.object({
   name: z.string().trim().min(1, "Please enter your name"),
   phone: z
@@ -16,6 +26,9 @@ const schema = z.object({
     .min(7, "Please enter a valid phone number"),
   email: z.string().trim().min(1, "Email is required").email("Please enter a valid email address"),
   address: z.string().trim().min(1, "Street address is required"),
+  service: z
+    .string()
+    .min(1, "Please pick a service so we know what you need"),
   message: z.string().trim().min(1, "Please tell us a bit about what you need"),
   "bot-field": z.string().optional(),
 });
@@ -59,6 +72,7 @@ export default function FreeEstimate() {
           phone: data.phone,
           email: data.email,
           address: data.address,
+          service: data.service,
           message: data.message,
           "bot-field": data["bot-field"] ?? "",
         }),
@@ -245,6 +259,35 @@ export default function FreeEstimate() {
                     />
                     {errors.address && (
                       <p className="mt-1.5 text-sm text-red-600">{errors.address.message}</p>
+                    )}
+                  </div>
+
+                  <div>
+                    <label htmlFor="service" className="block text-sm font-semibold text-[#0F2D4A] mb-1.5">
+                      What service are you interested in? <span className="text-red-500">*</span>
+                    </label>
+                    <select
+                      id="service"
+                      defaultValue=""
+                      aria-invalid={!!errors.service}
+                      className={`${errors.service ? inputErrorClass : inputClass} appearance-none bg-no-repeat bg-[right_1rem_center] pr-10`}
+                      style={{
+                        backgroundImage:
+                          "url(\"data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='8' viewBox='0 0 14 8'%3E%3Cpath fill='none' stroke='%230F2D4A' stroke-width='2' d='M1 1l6 6 6-6'/%3E%3C/svg%3E\")",
+                      }}
+                      {...register("service")}
+                    >
+                      <option value="" disabled>
+                        Select a service…
+                      </option>
+                      {SERVICE_OPTIONS.map((opt) => (
+                        <option key={opt} value={opt}>
+                          {opt}
+                        </option>
+                      ))}
+                    </select>
+                    {errors.service && (
+                      <p className="mt-1.5 text-sm text-red-600">{errors.service.message}</p>
                     )}
                   </div>
 
