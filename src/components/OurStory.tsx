@@ -1,8 +1,7 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
-const WADSWORTH_IMG = "/images/photo11.webp";
-// TODO: ACTION_IMG would ideally be the "tech squeegeeing tall picture window" inline shot — owner to supply file
-const ACTION_IMG = "/images/home-stone-windows.jpg";
+const WADSWORTH_IMG = "/images/wadsworth.webp";
+const ACTION_IMG = "/images/action-shot.jpg";
 
 export default function OurStory() {
   const { ref: imgRef } = useScrollReveal();

@@ -6,9 +6,7 @@ import { Phone, Mail, MapPin, CheckCircle, ArrowRight, ChevronLeft } from "lucid
 
 const SITE_URL = "https://www.warnerswindowcleaning.com";
 
-// TODO: Replace placeholder — original CDN ref was https://d2xsxph8kpxj0f.cloudfront.net/310519663307809653/aMdhJxAWUBqNrWQUiC9c7J/warners-logo_cc629939.webp
-const LOGO_URL =
-  "/images/warners-logo-placeholder.svg";
+const LOGO_URL = "/images/warners-logo.webp";
 const BG_IMG =
   "/images/photo5.jpg";
 
@@ -78,7 +76,7 @@ export default function CityPage() {
     "@type": "LocalBusiness",
     name: "Warner's Window Cleaning",
     description: city.metaDescription,
-    image: `${SITE_URL}/images/warners-logo-placeholder.svg`,
+    image: `${SITE_URL}/images/warners-logo.webp`,
     telephone: "+1-330-203-1654",
     email: "info@warnerswindowcleaning.com",
     url: `${SITE_URL}/window-cleaning/${city.slug}`,

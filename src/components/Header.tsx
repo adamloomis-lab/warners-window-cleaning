@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 
-// TODO: Replace placeholder — original CDN ref was https://d2xsxph8kpxj0f.cloudfront.net/310519663307809653/aMdhJxAWUBqNrWQUiC9c7J/warners-logo_cc629939.webp
-const LOGO_URL = "/images/warners-logo-placeholder.svg";
+const LOGO_URL = "/images/warners-logo.webp";
 
 const navLinks = [
   { label: "Home", href: "#home" },
