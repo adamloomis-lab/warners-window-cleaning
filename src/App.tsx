@@ -1,29 +1,20 @@
 import { Route, Switch } from "wouter";
-import { Toaster } from "sonner";
-
-function Placeholder() {
-  return (
-    <main className="min-h-screen flex items-center justify-center bg-slate-50 p-8">
-      <div className="text-center max-w-lg">
-        <h1 className="text-3xl font-bold text-slate-900 mb-3">
-          Warner's Window Cleaning
-        </h1>
-        <p className="text-slate-600">
-          Scaffold ready. Components and pages will be ported in Phase 3.
-        </p>
-      </div>
-    </main>
-  );
-}
+import { Toaster } from "@/components/ui/sonner";
+import ErrorBoundary from "@/components/ErrorBoundary";
+import Home from "@/pages/Home";
+import CityPage from "@/pages/CityPage";
+import NotFound from "@/pages/NotFound";
 
 export default function App() {
   return (
-    <>
+    <ErrorBoundary>
+      <Toaster />
       <Switch>
-        <Route path="/" component={Placeholder} />
-        <Route>{() => <Placeholder />}</Route>
+        <Route path="/" component={Home} />
+        <Route path="/window-cleaning/:slug" component={CityPage} />
+        <Route path="/404" component={NotFound} />
+        <Route component={NotFound} />
       </Switch>
-      <Toaster richColors position="top-center" />
-    </>
+    </ErrorBoundary>
   );
 }
