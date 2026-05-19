@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0f172a" />
+    <title>Warner's Window Cleaning | Wadsworth, OH — Family Owned Since 1975</title>
+    <meta
+      name="description"
+      content="Professional residential and commercial window cleaning serving Wadsworth, Medina, Akron and surrounding communities. Family owned since 1975. Call (330) 203-1654 for a free estimate."
+    />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+
+    <!-- Netlify Forms detection (hidden, SPA pattern) -->
+    <form name="estimate-request" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="tel" name="phone" />
+      <input type="text" name="address" />
+      <input type="text" name="city" />
+      <textarea name="message"></textarea>
+      <input type="text" name="bot-field" />
+    </form>
+  </body>
+</html>
