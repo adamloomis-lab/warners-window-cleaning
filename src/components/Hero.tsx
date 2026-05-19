@@ -1,14 +1,8 @@
 import { Phone } from "lucide-react";
 
-/*
-  HERO SECTION — Video background
-  Video 1: Cinematic sunlight through clean window with sheer curtains
-  Light/bright video → dark overlay for text contrast
-*/
-
-// TODO: Replace placeholder — original CDN ref was https://d2xsxph8kpxj0f.cloudfront.net/310519663307809653/aMdhJxAWUBqNrWQUiC9c7J/hero-video_019c29c1.mp4 (was an MP4 — fell back to static image)
-const HERO_VIDEO = "/images/hero-bg.jpg";
-const HERO_POSTER = "/images/home-stone-arched.jpg";
+// TODO: Hero originally used an MP4 background video. Drop a video file at
+// /public/images/hero.mp4 and swap the <img> below for a <video> element to restore.
+const HERO_IMAGE = "/images/home-stone-arched.jpg";
 
 export default function Hero() {
   return (
@@ -16,20 +10,14 @@ export default function Hero() {
       id="home"
       className="relative min-h-[540px] md:min-h-[640px] lg:min-h-[700px] flex items-center overflow-hidden"
     >
-      {/* Video Background */}
+      {/* Background image (was a video on the original site) */}
       <div className="absolute inset-0">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          poster={HERO_POSTER}
+        <img
+          src={HERO_IMAGE}
+          alt=""
           className="w-full h-full object-cover"
           aria-hidden="true"
-        >
-          <source src={HERO_VIDEO} type="video/mp4" />
-        </video>
-        {/* Multi-layer overlay for text readability over bright video */}
+        />
         <div className="absolute inset-0 bg-gradient-to-r from-[#0F2D4A]/90 via-[#0F2D4A]/75 to-[#0F2D4A]/40" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#0F2D4A]/40 to-transparent" />
       </div>

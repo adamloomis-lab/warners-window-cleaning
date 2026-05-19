@@ -6,8 +6,9 @@
   NO reveal animation — always visible for maximum impact.
 */
 
-// TODO: Replace placeholder — original CDN ref was https://d2xsxph8kpxj0f.cloudfront.net/310519663307809653/aMdhJxAWUBqNrWQUiC9c7J/cleaning-video_88166977.mp4 (was an MP4 — fell back to static image)
-const CLEANING_VIDEO = "/images/vid1-frame.jpg";
+// TODO: This section originally used an MP4 cleaning B-roll video. Drop a video file at
+// /public/images/cleaning.mp4 and swap the <img> for a <video> element to restore.
+const CLEANING_IMAGE = "/images/vid1-frame.jpg";
 
 export default function VideoBreak() {
   return (
@@ -15,19 +16,15 @@ export default function VideoBreak() {
       className="relative overflow-hidden"
       style={{ height: "clamp(280px, 40vw, 480px)" }}
     >
-      {/* Video background */}
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
+      {/* Background image (was a video on the original site) */}
+      <img
+        src={CLEANING_IMAGE}
+        alt=""
         className="absolute inset-0 w-full h-full object-cover"
         aria-hidden="true"
-      >
-        <source src={CLEANING_VIDEO} type="video/mp4" />
-      </video>
+      />
 
-      {/* Fallback background color in case video doesn't load */}
+      {/* Fallback background color */}
       <div className="absolute inset-0 bg-[#0F2D4A]" style={{ zIndex: -1 }} />
 
       {/* Overlay */}

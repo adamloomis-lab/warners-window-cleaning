@@ -1,12 +1,323 @@
 @import "tailwindcss";
 
-:root {
-  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  -webkit-font-smoothing: antialiased;
+@custom-variant dark (&:is(.dark *));
+
+/*
+  DESIGN SYSTEM: "Clear Sky" — Modern Service Brand
+  Colors: Navy #0F2D4A, Sky Blue #4A90D9, Light Blue #E8F4FD, White #FFFFFF, Charcoal #333333
+  Fonts: Plus Jakarta Sans (headings), DM Sans (body)
+  Philosophy: Bright, airy, optimistic — like looking through a freshly cleaned window
+*/
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  /* Brand Colors */
+  --color-navy: oklch(0.25 0.06 250);
+  --color-sky-blue: oklch(0.62 0.14 250);
+  --color-light-blue: oklch(0.95 0.02 240);
+  --color-charcoal: oklch(0.30 0.01 250);
+
+  /* Font families */
+  --font-heading: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
 }
 
-html,
-body,
-#root {
-  min-height: 100%;
+:root {
+  --radius: 0.5rem;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.30 0.01 250);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.30 0.01 250);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.30 0.01 250);
+  --primary: oklch(0.62 0.14 250);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.95 0.02 240);
+  --secondary-foreground: oklch(0.25 0.06 250);
+  --muted: oklch(0.95 0.02 240);
+  --muted-foreground: oklch(0.50 0.02 250);
+  --accent: oklch(0.95 0.02 240);
+  --accent-foreground: oklch(0.25 0.06 250);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.985 0 0);
+  --border: oklch(0.90 0.02 240);
+  --input: oklch(0.90 0.02 240);
+  --ring: oklch(0.62 0.14 250);
+  --chart-1: oklch(0.62 0.14 250);
+  --chart-2: oklch(0.25 0.06 250);
+  --chart-3: oklch(0.95 0.02 240);
+  --chart-4: oklch(0.50 0.02 250);
+  --chart-5: oklch(0.30 0.01 250);
+  --sidebar: oklch(1 0 0);
+  --sidebar-foreground: oklch(0.30 0.01 250);
+  --sidebar-primary: oklch(0.62 0.14 250);
+  --sidebar-primary-foreground: oklch(1 0 0);
+  --sidebar-accent: oklch(0.95 0.02 240);
+  --sidebar-accent-foreground: oklch(0.25 0.06 250);
+  --sidebar-border: oklch(0.90 0.02 240);
+  --sidebar-ring: oklch(0.62 0.14 250);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    line-height: 1.2;
+  }
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]),
+  [type="button"]:not(:disabled),
+  [type="submit"]:not(:disabled),
+  [type="reset"]:not(:disabled),
+  a[href],
+  select:not(:disabled),
+  input[type="checkbox"]:not(:disabled),
+  input[type="radio"]:not(:disabled) {
+    @apply cursor-pointer;
+  }
+}
+
+@layer components {
+  .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .flex {
+    min-height: 0;
+    min-width: 0;
+  }
+
+  @media (min-width: 640px) {
+    .container {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      padding-left: 2rem;
+      padding-right: 2rem;
+      max-width: 1280px;
+    }
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+/* ========== ANIMATION SYSTEM ==========
+   Using data-reveal attribute for opt-in animations.
+   Elements without [data-reveal] are always visible.
+   The useScrollReveal hook adds data-reveal and toggles .visible.
+*/
+
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+[data-reveal].visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+[data-reveal="left"] {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+[data-reveal="left"].visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+[data-reveal="right"] {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+[data-reveal="right"].visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+[data-reveal="scale"] {
+  opacity: 0;
+  transform: scale(0.92);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+[data-reveal="scale"].visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Stagger children — parent gets data-stagger, children animate */
+[data-stagger] > * {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+[data-stagger].visible > *:nth-child(1) { transition-delay: 0ms; opacity: 1; transform: translateY(0); }
+[data-stagger].visible > *:nth-child(2) { transition-delay: 100ms; opacity: 1; transform: translateY(0); }
+[data-stagger].visible > *:nth-child(3) { transition-delay: 100ms; opacity: 1; transform: translateY(0); }
+[data-stagger].visible > *:nth-child(4) { transition-delay: 200ms; opacity: 1; transform: translateY(0); }
+[data-stagger].visible > *:nth-child(5) { transition-delay: 250ms; opacity: 1; transform: translateY(0); }
+[data-stagger].visible > *:nth-child(6) { transition-delay: 300ms; opacity: 1; transform: translateY(0); }
+[data-stagger].visible > *:nth-child(n+7) { transition-delay: 350ms; opacity: 1; transform: translateY(0); }
+
+/* Hero entrance */
+@keyframes heroSlideIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.hero-animate > * {
+  animation: heroSlideIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.hero-animate > *:nth-child(1) { animation-delay: 0.1s; }
+.hero-animate > *:nth-child(2) { animation-delay: 0.3s; }
+.hero-animate > *:nth-child(3) { animation-delay: 0.5s; }
+
+/* Card hover depth */
+.card-depth {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.card-depth:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px -12px rgba(15, 45, 74, 0.15),
+              0 8px 16px -8px rgba(15, 45, 74, 0.1);
+}
+
+/* Floating animation for decorative elements */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Shimmer effect for CTA buttons */
+.btn-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+.btn-shimmer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.5s;
+}
+.btn-shimmer:hover::after {
+  left: 100%;
+}
+
+/* Gradient text utility */
+.text-gradient {
+  background: linear-gradient(135deg, #4A90D9 0%, #6BB5FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Soft glow for icons */
+.icon-glow {
+  box-shadow: 0 0 0 0 rgba(74, 144, 217, 0);
+  transition: box-shadow 0.4s ease;
+}
+.icon-glow:hover {
+  box-shadow: 0 0 20px 4px rgba(74, 144, 217, 0.3);
+}
+
+/* Gallery image overlay */
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+}
+.gallery-item::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(15, 45, 74, 0.4) 0%, transparent 50%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.gallery-item:hover::after {
+  opacity: 1;
+}
+
+/* Reduced motion: show everything immediately */
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal], [data-reveal="left"], [data-reveal="right"], [data-reveal="scale"], [data-stagger] > * {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+/* Safe area for iOS devices with home indicator */
+.safe-area-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
 }
