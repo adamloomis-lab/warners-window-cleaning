@@ -17,3 +17,8 @@ dist-ssr
 *.sw?
 
 .netlify
+
+dist
+dist-server
+node_modules
+*.tsbuildinfo
