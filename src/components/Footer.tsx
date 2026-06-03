@@ -85,10 +85,13 @@ export default function Footer() {
           <p className="text-white/50 text-sm">
             &copy; 2026 Warner's Window Cleaning. All rights reserved.
           </p>
-          <nav className="flex gap-6" aria-label="Footer navigation">
-            <a href="#home" className="text-white/50 hover:text-white text-sm transition-colors">Home</a>
-            <a href="#services" className="text-white/50 hover:text-white text-sm transition-colors">Services</a>
-            <a href="#estimate" className="text-white/50 hover:text-white text-sm transition-colors">Free Estimate</a>
+          <nav className="flex flex-wrap justify-center gap-x-6 gap-y-2" aria-label="Footer navigation">
+            <a href="/#home" className="text-white/50 hover:text-white text-sm transition-colors">Home</a>
+            <a href="/#services" className="text-white/50 hover:text-white text-sm transition-colors">Services</a>
+            <a href="/#estimate" className="text-white/50 hover:text-white text-sm transition-colors">Free Estimate</a>
+            <a href="/privacy" className="text-white/50 hover:text-white text-sm transition-colors">Privacy</a>
+            <a href="/terms" className="text-white/50 hover:text-white text-sm transition-colors">Terms</a>
+            <a href="/accessibility" className="text-white/50 hover:text-white text-sm transition-colors">Accessibility</a>
           </nav>
         </div>
       </div>
