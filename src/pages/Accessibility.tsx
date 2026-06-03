@@ -46,13 +46,6 @@ export default function Accessibility() {
         <a href={`tel:${BUSINESS.phoneE164}`}>{BUSINESS.phone}</a>. We'll do our best to provide
         the information you need through an alternative method and to address the issue promptly.
       </p>
-
-      <p>
-        <em>
-          This statement reflects our ongoing commitment to accessibility and is not a guarantee
-          or legal advice. Please consult your own counsel for compliance specific to your needs.
-        </em>
-      </p>
     </LegalPage>
   );
 }

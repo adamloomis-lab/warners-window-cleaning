@@ -62,13 +62,6 @@ export default function Terms() {
         <a href={`mailto:${BUSINESS.email}`}>{BUSINESS.email}</a> or{" "}
         <a href={`tel:${BUSINESS.phoneE164}`}>{BUSINESS.phone}</a>.
       </p>
-
-      <p>
-        <em>
-          These Terms are provided for general informational purposes and are not legal advice.
-          Please review them with your own legal counsel to confirm they meet your specific needs.
-        </em>
-      </p>
     </LegalPage>
   );
 }

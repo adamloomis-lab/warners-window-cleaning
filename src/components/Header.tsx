@@ -4,12 +4,12 @@ import { Menu, X } from "lucide-react";
 const LOGO_URL = "/images/warners-logo.webp";
 
 const navLinks = [
-  { label: "Home", href: "#home" },
-  { label: "Services", href: "#services" },
-  { label: "About", href: "#about" },
-  { label: "Our Work", href: "#our-work" },
-  { label: "Service Area", href: "#service-area" },
-  { label: "Free Estimate", href: "#estimate" },
+  { label: "Home", href: "/#home" },
+  { label: "Services", href: "/#services" },
+  { label: "About", href: "/#about" },
+  { label: "Our Work", href: "/#our-work" },
+  { label: "Service Area", href: "/#service-area" },
+  { label: "Free Estimate", href: "/#estimate" },
 ];
 
 export default function Header() {
@@ -32,7 +32,7 @@ export default function Header() {
     >
       <div className="container flex items-center justify-between py-3">
         {/* Logo */}
-        <a href="#home" className="flex-shrink-0 transition-transform duration-300 hover:scale-105">
+        <a href="/" className="flex-shrink-0 transition-transform duration-300 hover:scale-105">
           <img
             src={LOGO_URL}
             alt="Warner's Window Cleaning logo"
@@ -57,7 +57,7 @@ export default function Header() {
 
         {/* Desktop CTA */}
         <a
-          href="#estimate"
+          href="/#estimate"
           className="hidden lg:inline-flex items-center px-5 py-2.5 bg-[#4A90D9] text-white font-semibold rounded-lg hover:bg-[#3a7bc8] transition-all text-sm shadow-md shadow-[#4A90D9]/20 hover:shadow-lg hover:shadow-[#4A90D9]/30 hover:-translate-y-0.5"
         >
           Free Estimate
@@ -93,7 +93,7 @@ export default function Header() {
               </a>
             ))}
             <a
-              href="#estimate"
+              href="/#estimate"
               onClick={handleNavClick}
               className="mt-2 mx-4 text-center py-3 bg-[#4A90D9] text-white font-semibold rounded-lg hover:bg-[#3a7bc8] transition-colors shadow-md"
             >

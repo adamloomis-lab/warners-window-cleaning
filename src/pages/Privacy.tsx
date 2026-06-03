@@ -68,13 +68,6 @@ export default function Privacy() {
         {BUSINESS.address.street}, {BUSINESS.address.city}, {BUSINESS.address.state}{" "}
         {BUSINESS.address.zip}.
       </p>
-
-      <p>
-        <em>
-          This policy is provided for general informational purposes and is not legal advice.
-          Please review it with your own legal counsel to confirm it meets your specific needs.
-        </em>
-      </p>
     </LegalPage>
   );
 }
