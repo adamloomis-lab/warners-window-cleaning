@@ -6,22 +6,16 @@ import { useEffect, useRef, useState } from "react";
   3 columns on desktop, 2 on mobile. No wide/tall variations — just a clean gallery.
 */
 
-// TODO: A few gallery entries still rely on stand-in images for missing CDN sources
-//   - church-exterior (commercial) → /images/IMG_1291.jpeg
-//   - church-interior (interior)   → /images/photo7.jpg
-//   - ladder-work    (residential) → /images/photo2.jpg
-//   - tall-window    (residential) → /images/IMG_1293.jpeg
-// Replace these when better photos are available.
 const galleryImages = [
   {
-    src: "/images/home-stone-bay.jpg",
-    alt: "Stone-faced home with bay window and clean second-story windows in Wadsworth area",
+    src: "/images/home-victorian-porch.jpg",
+    alt: "Victorian-style home with wraparound porch and clean windows in Wadsworth area",
     label: "Residential",
   },
   {
-    src: "/images/IMG_1291.jpeg",
-    alt: "Large arched church windows cleaned by Warner's Window Cleaning",
-    label: "Commercial",
+    src: "/images/action-squeegee-2.jpg",
+    alt: "Warner's technician squeegeeing a large window from outside",
+    label: "Residential",
   },
   {
     src: "/images/sunroom-interior.jpg",
@@ -29,8 +23,8 @@ const galleryImages = [
     label: "Specialty",
   },
   {
-    src: "/images/photo2.jpg",
-    alt: "Warner's team member on ladder cleaning high residential windows",
+    src: "/images/warners-truck-on-site.jpg",
+    alt: "Warner's Window Cleaning truck in a customer's driveway, ready to work",
     label: "Residential",
   },
   {
@@ -44,8 +38,8 @@ const galleryImages = [
     label: "Commercial",
   },
   {
-    src: "/images/IMG_1293.jpeg",
-    alt: "Tall arched window being cleaned with ladder reaching second story",
+    src: "/images/home-tan-arched-window.jpg",
+    alt: "Large arched picture window on a tan two-story home, freshly cleaned",
     label: "Residential",
   },
   {
@@ -59,14 +53,54 @@ const galleryImages = [
     label: "Residential",
   },
   {
-    src: "/images/photo8.jpg",
-    alt: "Crystal-clear bay windows looking out at a Wadsworth neighborhood with American flag",
-    label: "Interior",
+    src: "/images/action-squeegee-1.jpg",
+    alt: "Close-up of Warner's technician cleaning a large picture window",
+    label: "Residential",
   },
   {
     src: "/images/sunroom-interior-2.jpg",
     alt: "Clean glass conservatory roof panels on a residential home",
     label: "Specialty",
+  },
+  {
+    src: "/images/home-craftsman-gray.jpg",
+    alt: "Premium craftsman gray home with manicured landscaping and clean windows",
+    label: "Residential",
+  },
+  {
+    src: "/images/home-modern-twostory.jpg",
+    alt: "Modern two-story home with porch and gazebo, freshly cleaned windows",
+    label: "Residential",
+  },
+  {
+    src: "/images/home-stone-craftsman.jpg",
+    alt: "Stone-faced craftsman home with picture window and clean lines",
+    label: "Residential",
+  },
+  {
+    src: "/images/home-ranch-porch.jpg",
+    alt: "Dark gray ranch home with wraparound porch and hanging flower baskets",
+    label: "Residential",
+  },
+  {
+    src: "/images/home-sage-gambrel.jpg",
+    alt: "Sage green gambrel-roof home with sunroom and detailed millwork windows",
+    label: "Residential",
+  },
+  {
+    src: "/images/windows-multi-pane.jpg",
+    alt: "Multi-pane residential window cleaned to a streak-free finish",
+    label: "Residential",
+  },
+  {
+    src: "/images/neighborhood-on-site.jpg",
+    alt: "Warner's team on a quiet residential street, working through the neighborhood",
+    label: "Residential",
+  },
+  {
+    src: "/images/window-detail-streetscape.jpg",
+    alt: "Clean window with a luxury home streetscape reflected in the glass",
+    label: "Residential",
   },
   {
     src: "/images/window-pair-detail.jpg",
@@ -77,6 +111,16 @@ const galleryImages = [
     src: "/images/photo7.jpg",
     alt: "Spotless commercial building windows reflecting greenery",
     label: "Commercial",
+  },
+  {
+    src: "/images/home-stone-bay.jpg",
+    alt: "Stone-faced home with bay window and clean second-story windows",
+    label: "Residential",
+  },
+  {
+    src: "/images/photo8.jpg",
+    alt: "Crystal-clear bay windows looking out at a Wadsworth neighborhood with American flag",
+    label: "Interior",
   },
   {
     src: "/images/storefront1.jpg",
