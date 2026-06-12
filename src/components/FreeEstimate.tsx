@@ -26,6 +26,7 @@ const schema = z.object({
     .min(7, "Please enter a valid phone number"),
   email: z.string().trim().min(1, "Email is required").email("Please enter a valid email address"),
   address: z.string().trim().min(1, "Street address is required"),
+  city: z.string().trim().min(1, "City is required"),
   service: z
     .string()
     .min(1, "Please pick a service so we know what you need"),
@@ -72,6 +73,7 @@ export default function FreeEstimate() {
           phone: data.phone,
           email: data.email,
           address: data.address,
+          city: data.city,
           service: data.service,
           message: data.message,
           "bot-field": data["bot-field"] ?? "",
@@ -244,22 +246,41 @@ export default function FreeEstimate() {
                     </div>
                   </div>
 
-                  <div>
-                    <label htmlFor="address" className="block text-sm font-semibold text-[#0F2D4A] mb-1.5">
-                      Street Address <span className="text-red-500">*</span>
-                    </label>
-                    <input
-                      id="address"
-                      type="text"
-                      autoComplete="street-address"
-                      placeholder="Your street address"
-                      aria-invalid={!!errors.address}
-                      className={errors.address ? inputErrorClass : inputClass}
-                      {...register("address")}
-                    />
-                    {errors.address && (
-                      <p className="mt-1.5 text-sm text-red-600">{errors.address.message}</p>
-                    )}
+                  <div className="grid sm:grid-cols-2 gap-4 sm:gap-5">
+                    <div>
+                      <label htmlFor="address" className="block text-sm font-semibold text-[#0F2D4A] mb-1.5">
+                        Street Address <span className="text-red-500">*</span>
+                      </label>
+                      <input
+                        id="address"
+                        type="text"
+                        autoComplete="street-address"
+                        placeholder="123 Main St"
+                        aria-invalid={!!errors.address}
+                        className={errors.address ? inputErrorClass : inputClass}
+                        {...register("address")}
+                      />
+                      {errors.address && (
+                        <p className="mt-1.5 text-sm text-red-600">{errors.address.message}</p>
+                      )}
+                    </div>
+                    <div>
+                      <label htmlFor="city" className="block text-sm font-semibold text-[#0F2D4A] mb-1.5">
+                        City <span className="text-red-500">*</span>
+                      </label>
+                      <input
+                        id="city"
+                        type="text"
+                        autoComplete="address-level2"
+                        placeholder="Wadsworth"
+                        aria-invalid={!!errors.city}
+                        className={errors.city ? inputErrorClass : inputClass}
+                        {...register("city")}
+                      />
+                      {errors.city && (
+                        <p className="mt-1.5 text-sm text-red-600">{errors.city.message}</p>
+                      )}
+                    </div>
                   </div>
 
                   <div>

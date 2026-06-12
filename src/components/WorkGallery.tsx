@@ -13,8 +13,28 @@ const galleryImages = [
     label: "Residential",
   },
   {
+    src: "/images/home-foyer-glass.jpg",
+    alt: "Two-story floor-to-ceiling entry glass looking out to landscaped grounds",
+    label: "Specialty",
+  },
+  {
+    src: "/images/commercial-anchor-heating.jpg",
+    alt: "Anchor Heating storefront windows cleaned by Warner's Window Cleaning",
+    label: "Commercial",
+  },
+  {
     src: "/images/action-squeegee-2.jpg",
     alt: "Warner's technician squeegeeing a large window from outside",
+    label: "Residential",
+  },
+  {
+    src: "/images/home-blue-twostory.jpg",
+    alt: "Blue and gray two-story home with bay window, freshly cleaned",
+    label: "Residential",
+  },
+  {
+    src: "/images/residential-on-site-ladder.jpg",
+    alt: "Stone-faced home window with Warner's ladder visible inside, ready to work",
     label: "Residential",
   },
   {
