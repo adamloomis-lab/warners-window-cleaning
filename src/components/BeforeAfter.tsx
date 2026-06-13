@@ -70,7 +70,7 @@ function BeforeAfterSlider({ before, after, label }: SliderPair) {
     <div className="flex flex-col items-center gap-3">
       <div
         ref={containerRef}
-        className="relative w-full rounded-2xl overflow-hidden cursor-col-resize select-none shadow-lg shadow-[#0F2D4A]/10 group"
+        className="relative w-full rounded-2xl overflow-hidden cursor-col-resize select-none shadow-lg shadow-[#1A1A1A]/10 group"
         style={{ aspectRatio: "4/5" }}
         onMouseDown={handleMouseDown}
         onTouchStart={handleTouchStart}
@@ -117,28 +117,28 @@ function BeforeAfterSlider({ before, after, label }: SliderPair) {
             style={{ boxShadow: "0 2px 16px rgba(0,0,0,0.25)" }}
           >
             <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
-              <path d="M8 5L3 11L8 17" stroke="#0F2D4A" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-              <path d="M14 5L19 11L14 17" stroke="#0F2D4A" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+              <path d="M8 5L3 11L8 17" stroke="#1A1A1A" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+              <path d="M14 5L19 11L14 17" stroke="#1A1A1A" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </div>
         </div>
 
         {/* Labels */}
-        <div className="absolute top-4 left-4 z-20 px-3 py-1.5 bg-[#0F2D4A]/80 backdrop-blur-sm text-white text-xs font-bold rounded-full tracking-wider uppercase pointer-events-none">
+        <div className="absolute top-4 left-4 z-20 px-3 py-1.5 bg-[#1A1A1A]/80 backdrop-blur-sm text-white text-xs font-bold rounded-full tracking-wider uppercase pointer-events-none">
           Before
         </div>
-        <div className="absolute top-4 right-4 z-20 px-3 py-1.5 bg-[#4A90D9]/80 backdrop-blur-sm text-white text-xs font-bold rounded-full tracking-wider uppercase pointer-events-none">
+        <div className="absolute top-4 right-4 z-20 px-3 py-1.5 bg-[#FA7864]/80 backdrop-blur-sm text-white text-xs font-bold rounded-full tracking-wider uppercase pointer-events-none">
           After
         </div>
 
         {/* Drag hint */}
         {!hasInteracted && (
-          <div className="absolute bottom-5 left-1/2 -translate-x-1/2 z-20 px-5 py-2.5 bg-white/95 backdrop-blur-sm rounded-full text-[#0F2D4A] text-sm font-semibold shadow-lg animate-pulse pointer-events-none">
+          <div className="absolute bottom-5 left-1/2 -translate-x-1/2 z-20 px-5 py-2.5 bg-white/95 backdrop-blur-sm rounded-full text-[#1A1A1A] text-sm font-semibold shadow-lg animate-pulse pointer-events-none">
             Drag to compare
           </div>
         )}
       </div>
-      <p className="text-sm font-semibold text-[#333333]/60 text-center tracking-wide">{label}</p>
+      <p className="text-sm font-semibold text-[#1A1A1A]/60 text-center tracking-wide">{label}</p>
     </div>
   );
 }
@@ -160,16 +160,16 @@ export default function BeforeAfter() {
   ];
 
   return (
-    <section className="py-20 md:py-28 bg-gradient-to-b from-white to-[#E8F4FD]/40">
+    <section className="py-20 md:py-28 bg-gradient-to-b from-white to-[#FFF5E6]/40">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div ref={sectionRef} className="text-center mb-14">
-          <span className="inline-block px-4 py-1.5 bg-[#4A90D9]/10 text-[#4A90D9] text-xs font-bold uppercase tracking-[0.15em] rounded-full mb-4">
+          <span className="inline-block px-4 py-1.5 bg-[#FA7864]/10 text-[#FA7864] text-xs font-bold uppercase tracking-[0.15em] rounded-full mb-4">
             The Difference
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#0F2D4A] mb-4" style={{ fontFamily: "var(--font-heading)" }}>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#1A1A1A] mb-4" style={{ fontFamily: "var(--font-heading)" }}>
             Before <span className="text-gradient">&</span> After
           </h2>
-          <p className="text-lg text-[#333333]/70 max-w-2xl mx-auto" style={{ fontFamily: "var(--font-body)" }}>
+          <p className="text-lg text-[#1A1A1A]/70 max-w-2xl mx-auto" style={{ fontFamily: "var(--font-body)" }}>
             See the Warner's difference for yourself. Drag the slider to compare.
           </p>
         </div>

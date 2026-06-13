@@ -51,17 +51,17 @@ export default function CityPage() {
 
   if (!city) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-[#E8F4FD]">
+      <div className="min-h-screen flex items-center justify-center bg-[#FFF5E6]">
         <div className="text-center">
-          <h1 className="text-3xl font-bold text-[#0F2D4A] mb-4">
+          <h1 className="text-3xl font-bold text-[#1A1A1A] mb-4">
             Page Not Found
           </h1>
-          <p className="text-[#333333]/70 mb-6">
+          <p className="text-[#1A1A1A]/70 mb-6">
             We couldn't find the city page you're looking for.
           </p>
           <a
             href="/"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-[#4A90D9] text-white font-semibold rounded-lg hover:bg-[#3a7bc8] transition-colors"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-[#FA7864] text-white font-semibold rounded-lg hover:bg-[#E8634F] transition-colors"
           >
             <ChevronLeft className="w-4 h-4" />
             Back to Home
@@ -126,14 +126,14 @@ export default function CityPage() {
           <div className="flex items-center gap-4">
             <a
               href="tel:3302031654"
-              className="hidden sm:inline-flex items-center gap-2 text-[#0F2D4A] font-semibold text-sm hover:text-[#4A90D9] transition-colors"
+              className="hidden sm:inline-flex items-center gap-2 text-[#1A1A1A] font-semibold text-sm hover:text-[#FA7864] transition-colors"
             >
               <Phone className="w-4 h-4" />
               (330) 203-1654
             </a>
             <a
               href="/#estimate"
-              className="inline-flex items-center px-5 py-2.5 bg-[#4A90D9] text-white font-semibold rounded-lg hover:bg-[#3a7bc8] transition-all text-sm shadow-md shadow-[#4A90D9]/20"
+              className="inline-flex items-center px-5 py-2.5 bg-[#FA7864] text-white font-semibold rounded-lg hover:bg-[#E8634F] transition-all text-sm shadow-md shadow-[#FA7864]/20"
             >
               Free Estimate
             </a>
@@ -150,7 +150,7 @@ export default function CityPage() {
               alt={`Window cleaning service in ${city.name}, Ohio`}
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-[#0F2D4A]/88" />
+            <div className="absolute inset-0 bg-[#1A1A1A]/88" />
           </div>
           <div className="container relative z-10 text-center">
             <a
@@ -169,7 +169,7 @@ export default function CityPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/#estimate"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#4A90D9] text-white font-bold rounded-xl hover:bg-[#3a7bc8] transition-all shadow-lg shadow-[#4A90D9]/30 hover:-translate-y-0.5 text-base"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#FA7864] text-white font-bold rounded-xl hover:bg-[#E8634F] transition-all shadow-lg shadow-[#FA7864]/30 hover:-translate-y-0.5 text-base"
               >
                 Get Your Free Estimate
                 <ArrowRight className="w-4 h-4" />
@@ -188,28 +188,28 @@ export default function CityPage() {
         {/* Intro */}
         <section className="py-16 md:py-20">
           <div className="container max-w-4xl">
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0F2D4A] mb-6">
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-[#1A1A1A] mb-6">
               Window Cleaning in {city.name}, Ohio
             </h2>
-            <p className="text-lg text-[#333333]/80 leading-relaxed mb-6">
+            <p className="text-lg text-[#1A1A1A]/80 leading-relaxed mb-6">
               {city.intro}
             </p>
-            <p className="text-lg text-[#333333]/80 leading-relaxed mb-6">
+            <p className="text-lg text-[#1A1A1A]/80 leading-relaxed mb-6">
               {city.whyUs}
             </p>
-            <p className="text-base text-[#333333]/70 leading-relaxed italic">
+            <p className="text-base text-[#1A1A1A]/70 leading-relaxed italic">
               {city.localNote}
             </p>
           </div>
         </section>
 
         {/* Services List */}
-        <section className="py-16 md:py-20 bg-[#E8F4FD]">
+        <section className="py-16 md:py-20 bg-[#FFF5E6]">
           <div className="container max-w-4xl">
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0F2D4A] mb-3">
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-[#1A1A1A] mb-3">
               Our Services in {city.name}
             </h2>
-            <p className="text-lg text-[#333333]/70 mb-8">
+            <p className="text-lg text-[#1A1A1A]/70 mb-8">
               We offer a full range of window cleaning services for {city.name}{" "}
               homes and businesses.
             </p>
@@ -219,8 +219,8 @@ export default function CityPage() {
                   key={service}
                   className="flex items-center gap-3 p-4 bg-white rounded-xl shadow-sm"
                 >
-                  <CheckCircle className="w-5 h-5 text-[#4A90D9] flex-shrink-0" />
-                  <span className="text-[#333333] font-medium text-base">
+                  <CheckCircle className="w-5 h-5 text-[#FA7864] flex-shrink-0" />
+                  <span className="text-[#1A1A1A] font-medium text-base">
                     {service}
                   </span>
                 </div>
@@ -230,7 +230,7 @@ export default function CityPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 md:py-20 bg-[#0F2D4A]">
+        <section className="py-16 md:py-20 bg-[#1A1A1A]">
           <div className="container text-center max-w-3xl">
             <h2 className="text-2xl sm:text-3xl font-extrabold text-white mb-4">
               Ready for Sparkling Clean Windows in {city.name}?
@@ -242,7 +242,7 @@ export default function CityPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/#estimate"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#4A90D9] text-white font-bold rounded-xl hover:bg-[#3a7bc8] transition-all shadow-lg shadow-[#4A90D9]/30 hover:-translate-y-0.5 text-base"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#FA7864] text-white font-bold rounded-xl hover:bg-[#E8634F] transition-all shadow-lg shadow-[#FA7864]/30 hover:-translate-y-0.5 text-base"
               >
                 Request Free Estimate
                 <ArrowRight className="w-4 h-4" />
@@ -264,41 +264,41 @@ export default function CityPage() {
             <div className="grid md:grid-cols-3 gap-4">
               <a
                 href="tel:3302031654"
-                className="flex items-center gap-4 p-5 bg-[#E8F4FD] rounded-xl hover:shadow-md transition-all"
+                className="flex items-center gap-4 p-5 bg-[#FFF5E6] rounded-xl hover:shadow-md transition-all"
               >
-                <div className="w-12 h-12 rounded-xl bg-[#0F2D4A] flex items-center justify-center flex-shrink-0">
+                <div className="w-12 h-12 rounded-xl bg-[#1A1A1A] flex items-center justify-center flex-shrink-0">
                   <Phone className="w-5 h-5 text-white" />
                 </div>
                 <div>
-                  <p className="text-sm text-[#333333]/60 font-medium">
+                  <p className="text-sm text-[#1A1A1A]/60 font-medium">
                     Call or Text
                   </p>
-                  <p className="font-bold text-[#0F2D4A]">(330) 203-1654</p>
+                  <p className="font-bold text-[#1A1A1A]">(330) 203-1654</p>
                 </div>
               </a>
               <a
                 href="mailto:info@warnerswindowcleaning.com"
-                className="flex items-center gap-4 p-5 bg-[#E8F4FD] rounded-xl hover:shadow-md transition-all overflow-hidden"
+                className="flex items-center gap-4 p-5 bg-[#FFF5E6] rounded-xl hover:shadow-md transition-all overflow-hidden"
               >
-                <div className="w-12 h-12 rounded-xl bg-[#0F2D4A] flex items-center justify-center flex-shrink-0">
+                <div className="w-12 h-12 rounded-xl bg-[#1A1A1A] flex items-center justify-center flex-shrink-0">
                   <Mail className="w-5 h-5 text-white" />
                 </div>
                 <div className="min-w-0">
-                  <p className="text-sm text-[#333333]/60 font-medium">Email</p>
-                  <p className="font-bold text-[#0F2D4A] text-[11px] lg:text-sm truncate" title="info@warnerswindowcleaning.com">
+                  <p className="text-sm text-[#1A1A1A]/60 font-medium">Email</p>
+                  <p className="font-bold text-[#1A1A1A] text-[11px] lg:text-sm truncate" title="info@warnerswindowcleaning.com">
                     info@warnerswindowcleaning.com
                   </p>
                 </div>
               </a>
-              <div className="flex items-center gap-4 p-5 bg-[#E8F4FD] rounded-xl">
-                <div className="w-12 h-12 rounded-xl bg-[#0F2D4A] flex items-center justify-center flex-shrink-0">
+              <div className="flex items-center gap-4 p-5 bg-[#FFF5E6] rounded-xl">
+                <div className="w-12 h-12 rounded-xl bg-[#1A1A1A] flex items-center justify-center flex-shrink-0">
                   <MapPin className="w-5 h-5 text-white" />
                 </div>
                 <div>
-                  <p className="text-sm text-[#333333]/60 font-medium">
+                  <p className="text-sm text-[#1A1A1A]/60 font-medium">
                     Location
                   </p>
-                  <p className="font-bold text-[#0F2D4A] text-sm">
+                  <p className="font-bold text-[#1A1A1A] text-sm">
                     Wadsworth, OH 44281
                   </p>
                 </div>
@@ -310,7 +310,7 @@ export default function CityPage() {
         {/* Other Service Areas */}
         <section className="py-12 md:py-16 bg-gray-50 border-t border-gray-100">
           <div className="container max-w-4xl text-center">
-            <h3 className="text-xl font-bold text-[#0F2D4A] mb-6">
+            <h3 className="text-xl font-bold text-[#1A1A1A] mb-6">
               We Also Serve
             </h3>
             <div className="flex flex-wrap justify-center gap-3">
@@ -324,7 +324,7 @@ export default function CityPage() {
                       e.preventDefault();
                       setLocation(`/window-cleaning/${c.slug}`);
                     }}
-                    className="px-4 py-2 bg-white border border-gray-200 rounded-full text-sm font-medium text-[#333333] hover:border-[#4A90D9] hover:text-[#4A90D9] transition-all"
+                    className="px-4 py-2 bg-white border border-gray-200 rounded-full text-sm font-medium text-[#1A1A1A] hover:border-[#FA7864] hover:text-[#FA7864] transition-all"
                   >
                     {c.name}, OH
                   </a>
@@ -335,7 +335,7 @@ export default function CityPage() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-[#0F2D4A] text-white">
+      <footer className="bg-[#1A1A1A] text-white">
         <div className="container py-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-white/50 text-sm">
             &copy; 2026 Warner's Window Cleaning. All rights reserved.
@@ -386,13 +386,13 @@ export default function CityPage() {
         <div className="flex gap-3 p-3">
           <a
             href="/#estimate"
-            className="flex-1 flex items-center justify-center gap-2 py-3 bg-[#4A90D9] text-white font-bold rounded-lg text-sm shadow-md"
+            className="flex-1 flex items-center justify-center gap-2 py-3 bg-[#FA7864] text-white font-bold rounded-lg text-sm shadow-md"
           >
             Get Free Estimate
           </a>
           <a
             href="tel:3302031654"
-            className="flex items-center justify-center gap-2 px-5 py-3 bg-[#0F2D4A] text-white font-bold rounded-lg text-sm shadow-md"
+            className="flex items-center justify-center gap-2 px-5 py-3 bg-[#1A1A1A] text-white font-bold rounded-lg text-sm shadow-md"
           >
             <Phone className="w-4 h-4" />
             Call Now

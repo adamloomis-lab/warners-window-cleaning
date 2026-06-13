@@ -77,7 +77,7 @@ export default function TrustBar() {
   const satisfactionCount = useCountUp(100, 2000, isVisible);
 
   return (
-    <section className="bg-[#E8F4FD] py-14 md:py-16">
+    <section className="bg-[#FFF5E6] py-14 md:py-16">
       <div className="container" ref={sectionRef}>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
           {trustItems.map((item, i) => {
@@ -95,7 +95,7 @@ export default function TrustBar() {
                 }}
               >
                 {/* Glass card */}
-                <div className="relative rounded-xl bg-white/70 backdrop-blur-sm border border-white/80 shadow-sm p-6 text-center overflow-hidden transition-shadow duration-300 hover:shadow-lg hover:shadow-[#4A90D9]/10">
+                <div className="relative rounded-xl bg-white/70 backdrop-blur-sm border border-white/80 shadow-sm p-6 text-center overflow-hidden transition-shadow duration-300 hover:shadow-lg hover:shadow-[#FA7864]/10">
 
                   {/* Frost overlay that fades away */}
                   <div
@@ -122,7 +122,7 @@ export default function TrustBar() {
 
                   {/* Tiny water droplet that slides down after the streak */}
                   <div
-                    className="absolute left-[calc(50%+6px)] w-1.5 h-1.5 rounded-full bg-[#4A90D9]/30 pointer-events-none z-20"
+                    className="absolute left-[calc(50%+6px)] w-1.5 h-1.5 rounded-full bg-[#FA7864]/30 pointer-events-none z-20"
                     style={{
                       top: isVisible ? "105%" : "10%",
                       opacity: isVisible ? 0 : 0.6,
@@ -132,14 +132,14 @@ export default function TrustBar() {
 
                   {/* Icon */}
                   <div className="relative z-[5] flex justify-center mb-3">
-                    <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#0F2D4A] to-[#1a3d5c] flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
-                      <item.icon className="w-6 h-6 text-[#4A90D9]" strokeWidth={1.8} />
+                    <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#1A1A1A] to-[#1A1A1A] flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
+                      <item.icon className="w-6 h-6 text-[#FA7864]" strokeWidth={1.8} />
                     </div>
                   </div>
 
                   {/* Count number */}
                   {countValue !== null && (
-                    <div className="relative z-[5] font-extrabold text-[#0F2D4A] text-3xl tabular-nums leading-none mb-1"
+                    <div className="relative z-[5] font-extrabold text-[#1A1A1A] text-3xl tabular-nums leading-none mb-1"
                       style={{ fontFamily: "var(--font-heading)" }}
                     >
                       {countValue}{i === 0 ? "+" : "%"}
@@ -148,14 +148,14 @@ export default function TrustBar() {
 
                   {/* Title */}
                   <h3
-                    className="relative z-[5] font-bold text-[#0F2D4A] text-sm sm:text-[0.9rem] leading-snug"
+                    className="relative z-[5] font-bold text-[#1A1A1A] text-sm sm:text-[0.9rem] leading-snug"
                     style={{ fontFamily: "var(--font-heading)" }}
                   >
                     {item.title}
                   </h3>
 
                   {/* Description */}
-                  <p className="relative z-[5] text-[#333333]/60 text-xs sm:text-sm mt-1">
+                  <p className="relative z-[5] text-[#1A1A1A]/60 text-xs sm:text-sm mt-1">
                     {item.description}
                   </p>
                 </div>

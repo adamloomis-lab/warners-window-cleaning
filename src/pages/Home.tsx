@@ -1,7 +1,7 @@
 /*
   DESIGN: "Clear Sky" — Modern Service Brand
   Bright, airy, optimistic. Plus Jakarta Sans headings + DM Sans body.
-  Colors: Navy #0F2D4A, Sky Blue #4A90D9, Light Blue #E8F4FD, White, Charcoal #333333
+  Colors: Navy #1A1A1A, Sky Blue #FA7864, Light Blue #FFF5E6, White, Charcoal #1A1A1A
 */
 
 import AnnouncementBar from "@/components/AnnouncementBar";

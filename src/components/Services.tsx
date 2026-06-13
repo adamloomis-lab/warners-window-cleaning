@@ -79,7 +79,7 @@ function ServiceCard({
   return (
     <div
       ref={cardRef}
-      className="group bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-sm hover:shadow-xl hover:shadow-[#4A90D9]/10 transition-shadow duration-500"
+      className="group bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-sm hover:shadow-xl hover:shadow-[#FA7864]/10 transition-shadow duration-500"
       style={{
         opacity: isVisible ? 1 : 0,
         transform: isVisible ? "translate(0, 0)" : getInitialTransform(),
@@ -93,18 +93,18 @@ function ServiceCard({
           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
           loading="lazy"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0F2D4A]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A1A]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
       </div>
       <div className="p-7">
-        <h3 className="text-xl font-bold text-[#0F2D4A] mb-3">
+        <h3 className="text-xl font-bold text-[#1A1A1A] mb-3">
           {service.title}
         </h3>
-        <p className="text-[#333333]/80 mb-6 leading-relaxed text-base">
+        <p className="text-[#1A1A1A]/80 mb-6 leading-relaxed text-base">
           {service.description}
         </p>
         <a
           href="#estimate"
-          className="inline-flex items-center px-6 py-2.5 bg-[#4A90D9] text-white font-semibold rounded-lg hover:bg-[#3a7bc8] transition-all text-sm hover:-translate-y-0.5 shadow-md shadow-[#4A90D9]/20"
+          className="inline-flex items-center px-6 py-2.5 bg-[#FA7864] text-white font-semibold rounded-lg hover:bg-[#E8634F] transition-all text-sm hover:-translate-y-0.5 shadow-md shadow-[#FA7864]/20"
         >
           Get a Quote
         </a>
@@ -120,13 +120,13 @@ export default function Services() {
     <section id="services" className="py-16 md:py-24 bg-white">
       <div className="container">
         <div ref={headerRef} className="text-center max-w-2xl mx-auto mb-14">
-          <span className="inline-block px-4 py-1.5 bg-[#E8F4FD] text-[#4A90D9] text-sm font-semibold rounded-full mb-4 tracking-wide uppercase">
+          <span className="inline-block px-4 py-1.5 bg-[#FFF5E6] text-[#FA7864] text-sm font-semibold rounded-full mb-4 tracking-wide uppercase">
             What We Do
           </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0F2D4A]">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#1A1A1A]">
             Our Services
           </h2>
-          <p className="mt-4 text-lg text-[#333333]/80">
+          <p className="mt-4 text-lg text-[#1A1A1A]/80">
             Professional window cleaning for homes and businesses across Northeast Ohio.
           </p>
         </div>

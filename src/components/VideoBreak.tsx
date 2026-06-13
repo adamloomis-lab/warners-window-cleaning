@@ -25,10 +25,10 @@ export default function VideoBreak() {
       />
 
       {/* Fallback background color */}
-      <div className="absolute inset-0 bg-[#0F2D4A]" style={{ zIndex: -1 }} />
+      <div className="absolute inset-0 bg-[#1A1A1A]" style={{ zIndex: -1 }} />
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#0F2D4A]/80 via-[#0F2D4A]/60 to-[#0F2D4A]/40" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#1A1A1A]/80 via-[#1A1A1A]/60 to-[#1A1A1A]/40" />
 
       {/* Content */}
       <div className="relative z-10 h-full flex items-center justify-center text-center px-6">
@@ -46,7 +46,7 @@ export default function VideoBreak() {
           <div className="mt-6 flex justify-center">
             <a
               href="#estimate"
-              className="btn-shimmer inline-flex items-center px-8 py-3.5 bg-[#4A90D9] text-white font-bold rounded-lg hover:bg-[#3a7bc8] transition-all text-base shadow-xl shadow-[#4A90D9]/30 hover:shadow-[#4A90D9]/50 hover:-translate-y-0.5"
+              className="btn-shimmer inline-flex items-center px-8 py-3.5 bg-[#FA7864] text-white font-bold rounded-lg hover:bg-[#E8634F] transition-all text-base shadow-xl shadow-[#FA7864]/30 hover:shadow-[#FA7864]/50 hover:-translate-y-0.5"
             >
               Get Your Free Estimate
             </a>

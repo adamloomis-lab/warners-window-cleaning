@@ -6,13 +6,13 @@ export default function MobileCTA() {
       <div className="flex gap-3">
         <a
           href="#estimate"
-          className="btn-shimmer flex-1 flex items-center justify-center px-4 py-3 bg-[#4A90D9] text-white font-bold rounded-xl hover:bg-[#3a7bc8] transition-all text-sm shadow-md shadow-[#4A90D9]/25"
+          className="btn-shimmer flex-1 flex items-center justify-center px-4 py-3 bg-[#FA7864] text-white font-bold rounded-xl hover:bg-[#E8634F] transition-all text-sm shadow-md shadow-[#FA7864]/25"
         >
           Get Free Estimate
         </a>
         <a
           href="tel:3302031654"
-          className="flex items-center justify-center px-4 py-3 bg-[#0F2D4A] text-white font-bold rounded-xl hover:bg-[#1a3d5c] transition-all text-sm shadow-md gap-2"
+          className="flex items-center justify-center px-4 py-3 bg-[#1A1A1A] text-white font-bold rounded-xl hover:bg-[#1A1A1A] transition-all text-sm shadow-md gap-2"
         >
           <Phone className="w-4 h-4" />
           <span className="hidden sm:inline">Call Now</span>

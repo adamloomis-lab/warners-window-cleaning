@@ -18,12 +18,12 @@ export default function Hero() {
           className="w-full h-full object-cover"
           aria-hidden="true"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0F2D4A]/90 via-[#0F2D4A]/75 to-[#0F2D4A]/40" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0F2D4A]/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#1A1A1A]/90 via-[#1A1A1A]/75 to-[#1A1A1A]/40" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A1A]/40 to-transparent" />
       </div>
 
       {/* Decorative floating elements */}
-      <div className="absolute top-20 right-20 w-32 h-32 bg-[#4A90D9]/10 rounded-full blur-3xl animate-float hidden lg:block" />
+      <div className="absolute top-20 right-20 w-32 h-32 bg-[#FA7864]/10 rounded-full blur-3xl animate-float hidden lg:block" />
       <div className="absolute bottom-16 right-40 w-20 h-20 bg-white/5 rounded-full blur-2xl animate-float" style={{ animationDelay: '1.5s' }} />
 
       {/* Content with staggered entrance */}
@@ -39,7 +39,7 @@ export default function Hero() {
           <div className="mt-9 flex flex-col sm:flex-row gap-4">
             <a
               href="#estimate"
-              className="btn-shimmer inline-flex items-center justify-center px-8 py-4 bg-[#4A90D9] text-white font-bold rounded-lg hover:bg-[#3a7bc8] transition-all text-base shadow-xl shadow-[#4A90D9]/30 hover:shadow-[#4A90D9]/50 hover:-translate-y-0.5"
+              className="btn-shimmer inline-flex items-center justify-center px-8 py-4 bg-[#FA7864] text-white font-bold rounded-lg hover:bg-[#E8634F] transition-all text-base shadow-xl shadow-[#FA7864]/30 hover:shadow-[#FA7864]/50 hover:-translate-y-0.5"
             >
               Get Your Free Estimate
             </a>
@@ -55,7 +55,7 @@ export default function Hero() {
       </div>
 
       {/* Bottom edge fade for seamless transition */}
-      <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-[#E8F4FD] to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-[#FFF5E6] to-transparent" />
     </section>
   );
 }

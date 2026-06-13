@@ -4,7 +4,7 @@
 
 /*
   DESIGN SYSTEM: "Clear Sky" — Modern Service Brand
-  Colors: Navy #0F2D4A, Sky Blue #4A90D9, Light Blue #E8F4FD, White #FFFFFF, Charcoal #333333
+  Colors: Navy #1A1A1A, Sky Blue #FA7864, Light Blue #FFF5E6, White #FFFFFF, Charcoal #1A1A1A
   Fonts: Plus Jakarta Sans (headings), DM Sans (body)
   Philosophy: Bright, airy, optimistic — like looking through a freshly cleaned window
 */
@@ -47,14 +47,23 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
 
-  /* Brand Colors */
-  --color-navy: oklch(0.25 0.06 250);
-  --color-sky-blue: oklch(0.62 0.14 250);
-  --color-light-blue: oklch(0.95 0.02 240);
-  --color-charcoal: oklch(0.30 0.01 250);
+  /* Brand Colors — Sunlit Heritage */
+  --color-canvas: #FAF7F2;        /* warm off-white page bg */
+  --color-cream: #FFF5E6;         /* creamy accent surface */
+  --color-buttermilk: #F2EEE6;    /* slightly cooler section bg */
+  --color-card: #FFFFFF;          /* card surface */
+  --color-ink: #1A1A1A;           /* primary text, headings */
+  --color-truffle: #4A4A4A;       /* secondary text */
+  --color-ash: #6B6B6B;           /* muted/tertiary text */
+  --color-border-warm: #E5E0D6;   /* soft warm border */
+  --color-coral: #FA7864;         /* primary action accent */
+  --color-coral-deep: #E8634F;    /* hover/pressed state */
+  --color-desert-rose: #DC8264;   /* secondary accent */
+  --color-navy-foot: #1A1A1A;     /* ink footer (replaces navy) */
 
   /* Font families */
-  --font-heading: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-heading: 'Fraunces', Georgia, serif;
   --font-body: 'DM Sans', system-ui, sans-serif;
 }
 
@@ -99,15 +108,18 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    background: var(--color-canvas);
+    color: var(--color-ink);
     font-family: var(--font-body);
     font-size: 16px;
     line-height: 1.6;
   }
   h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-heading);
-    font-weight: 700;
-    line-height: 1.2;
+    font-family: var(--font-display);
+    font-weight: 500;
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+    color: var(--color-ink);
   }
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),
@@ -276,7 +288,7 @@ html {
 
 /* Gradient text utility */
 .text-gradient {
-  background: linear-gradient(135deg, #4A90D9 0%, #6BB5FF 100%);
+  background: linear-gradient(135deg, #FA7864 0%, #6BB5FF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -332,7 +344,7 @@ html {
   font-family: var(--font-heading);
   font-size: 1.5rem;
   font-weight: 800;
-  color: #0F2D4A;
+  color: #1A1A1A;
   margin: 2em 0 0.75em;
   line-height: 1.25;
 }
@@ -343,10 +355,93 @@ html {
 }
 .legal-prose li { margin: 0.25em 0; }
 .legal-prose a {
-  color: #4A90D9;
+  color: #FA7864;
   text-decoration: underline;
   text-underline-offset: 2px;
 }
-.legal-prose a:hover { color: #3a7bc8; }
-.legal-prose strong { color: #0F2D4A; }
+.legal-prose a:hover { color: #E8634F; }
+.legal-prose strong { color: #1A1A1A; }
 .legal-prose em { color: #6b7280; font-style: italic; }
+
+/* ========== SUNLIT HERITAGE — SURFACE/COMPONENT UTILITIES ========== */
+.bg-canvas { background: var(--color-canvas); }
+.bg-cream { background: var(--color-cream); }
+.bg-buttermilk { background: var(--color-buttermilk); }
+.bg-card { background: var(--color-card); }
+.bg-ink { background: var(--color-ink); }
+.bg-coral { background: var(--color-coral); }
+.text-ink { color: var(--color-ink); }
+.text-truffle { color: var(--color-truffle); }
+.text-ash { color: var(--color-ash); }
+.text-coral { color: var(--color-coral); }
+.text-coral-deep { color: var(--color-coral-deep); }
+.text-cream { color: var(--color-cream); }
+.border-warm { border-color: var(--color-border-warm); }
+
+.font-display { font-family: var(--font-display); }
+.font-body { font-family: var(--font-body); }
+
+/* Primary pill button — coral */
+.btn-coral {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: var(--color-coral);
+  color: #fff;
+  border-radius: 999px;
+  padding: 0.85rem 1.6rem;
+  font-weight: 500;
+  font-size: 0.95rem;
+  letter-spacing: -0.01em;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+.btn-coral:hover {
+  background: var(--color-coral-deep);
+  transform: translateY(-1px);
+}
+
+/* Outlined pill — desert rose ghost */
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: transparent;
+  color: var(--color-desert-rose);
+  border: 1px solid var(--color-desert-rose);
+  border-radius: 999px;
+  padding: 0.85rem 1.6rem;
+  font-weight: 500;
+  font-size: 0.95rem;
+  letter-spacing: -0.01em;
+  transition: background 0.2s ease;
+}
+.btn-ghost:hover {
+  background: rgba(220, 130, 100, 0.08);
+}
+
+/* Eyebrow tag — small uppercase coral pill */
+.eyebrow {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-coral);
+  padding-bottom: 0.25rem;
+}
+
+/* Section rhythm */
+.section-pad {
+  padding-top: clamp(3.5rem, 7vw, 6rem);
+  padding-bottom: clamp(3.5rem, 7vw, 6rem);
+}
+
+/* Card */
+.card-warm {
+  background: var(--color-card);
+  border: 1px solid var(--color-border-warm);
+  border-radius: 20px;
+}
