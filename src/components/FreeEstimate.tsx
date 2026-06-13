@@ -42,9 +42,9 @@ const encode = (data: Record<string, string>) =>
     .join("&");
 
 const inputClass =
-  "w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#FA7864] focus:ring-2 focus:ring-[#FA7864]/20 outline-none transition-all text-[#1A1A1A] bg-gray-50/50 focus:bg-white text-base";
+  "w-full px-4 py-3 rounded-full border border-gray-200 focus:border-[#FA7864] focus:ring-2 focus:ring-[#FA7864]/20 outline-none transition-all text-[#1A1A1A] bg-gray-50/50 focus:bg-white text-base";
 const inputErrorClass =
-  "w-full px-4 py-3 rounded-xl border border-red-400 focus:border-red-500 focus:ring-2 focus:ring-red-200 outline-none transition-all text-[#1A1A1A] bg-red-50/40 focus:bg-white text-base";
+  "w-full px-4 py-3 rounded-full border border-red-400 focus:border-red-500 focus:ring-2 focus:ring-red-200 outline-none transition-all text-[#1A1A1A] bg-red-50/40 focus:bg-white text-base";
 
 export default function FreeEstimate() {
   const [submitted, setSubmitted] = useState(false);
@@ -159,7 +159,7 @@ export default function FreeEstimate() {
                   </p>
                   <a
                     href="tel:3302031654"
-                    className="inline-flex items-center gap-2 px-6 py-3 bg-[#1A1A1A] text-white font-semibold rounded-xl hover:bg-[#1A1A1A] transition-colors"
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-[#1A1A1A] text-white font-semibold rounded-full hover:bg-[#1A1A1A] transition-colors"
                   >
                     <Phone className="w-4 h-4" />
                     (330) 203-1654
@@ -332,7 +332,7 @@ export default function FreeEstimate() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-[#FA7864] text-white font-bold rounded-xl hover:bg-[#E8634F] transition-all disabled:opacity-60 disabled:cursor-not-allowed text-base shadow-lg shadow-[#FA7864]/25 hover:shadow-[#FA7864]/40 hover:-translate-y-0.5"
+                    className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-[#FA7864] text-white font-medium rounded-full hover:bg-[#E8634F] transition-all disabled:opacity-60 disabled:cursor-not-allowed text-base shadow-lg shadow-[#FA7864]/25 hover:shadow-[#FA7864]/40 hover:-translate-y-0.5"
                   >
                     <Send className="w-4 h-4" />
                     {isSubmitting ? "Sending..." : "Request My Free Estimate"}

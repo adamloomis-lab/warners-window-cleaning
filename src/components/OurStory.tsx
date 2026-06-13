@@ -30,7 +30,7 @@ export default function OurStory() {
                 loading="lazy"
               />
             </div>
-            <div className="absolute top-4 left-4 bg-[#1A1A1A] text-white px-4 py-2 rounded-xl shadow-lg hidden md:flex flex-col items-center">
+            <div className="absolute top-4 left-4 bg-[#1A1A1A] text-white px-4 py-2 rounded-full shadow-lg hidden md:flex flex-col items-center">
               <span className="text-2xl font-extrabold text-[#FA7864]">50+</span>
               <span className="text-xs font-medium tracking-wide uppercase">Years</span>
             </div>

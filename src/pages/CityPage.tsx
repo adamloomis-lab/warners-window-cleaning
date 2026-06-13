@@ -61,7 +61,7 @@ export default function CityPage() {
           </p>
           <a
             href="/"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-[#FA7864] text-white font-semibold rounded-lg hover:bg-[#E8634F] transition-colors"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-[#FA7864] text-white font-semibold rounded-full hover:bg-[#E8634F] transition-colors"
           >
             <ChevronLeft className="w-4 h-4" />
             Back to Home
@@ -133,7 +133,7 @@ export default function CityPage() {
             </a>
             <a
               href="/#estimate"
-              className="inline-flex items-center px-5 py-2.5 bg-[#FA7864] text-white font-semibold rounded-lg hover:bg-[#E8634F] transition-all text-sm shadow-md shadow-[#FA7864]/20"
+              className="inline-flex items-center px-5 py-2.5 bg-[#FA7864] text-white font-semibold rounded-full hover:bg-[#E8634F] transition-all text-sm shadow-md shadow-[#FA7864]/20"
             >
               Free Estimate
             </a>
@@ -169,14 +169,14 @@ export default function CityPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/#estimate"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#FA7864] text-white font-bold rounded-xl hover:bg-[#E8634F] transition-all shadow-lg shadow-[#FA7864]/30 hover:-translate-y-0.5 text-base"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#FA7864] text-white font-medium rounded-full hover:bg-[#E8634F] transition-all shadow-lg shadow-[#FA7864]/30 hover:-translate-y-0.5 text-base"
               >
                 Get Your Free Estimate
                 <ArrowRight className="w-4 h-4" />
               </a>
               <a
                 href="tel:3302031654"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/25 text-white font-bold rounded-xl hover:bg-white/20 transition-all text-base"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/25 text-white font-medium rounded-full hover:bg-white/20 transition-all text-base"
               >
                 <Phone className="w-4 h-4" />
                 (330) 203-1654
@@ -242,14 +242,14 @@ export default function CityPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/#estimate"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#FA7864] text-white font-bold rounded-xl hover:bg-[#E8634F] transition-all shadow-lg shadow-[#FA7864]/30 hover:-translate-y-0.5 text-base"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#FA7864] text-white font-medium rounded-full hover:bg-[#E8634F] transition-all shadow-lg shadow-[#FA7864]/30 hover:-translate-y-0.5 text-base"
               >
                 Request Free Estimate
                 <ArrowRight className="w-4 h-4" />
               </a>
               <a
                 href="tel:3302031654"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 border border-white/25 text-white font-bold rounded-xl hover:bg-white/20 transition-all text-base"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 border border-white/25 text-white font-medium rounded-full hover:bg-white/20 transition-all text-base"
               >
                 <Phone className="w-4 h-4" />
                 Call (330) 203-1654
@@ -392,7 +392,7 @@ export default function CityPage() {
           </a>
           <a
             href="tel:3302031654"
-            className="flex items-center justify-center gap-2 px-5 py-3 bg-[#1A1A1A] text-white font-bold rounded-lg text-sm shadow-md"
+            className="flex items-center justify-center gap-2 px-5 py-3 bg-[#1A1A1A] text-white font-medium rounded-full text-sm shadow-md"
           >
             <Phone className="w-4 h-4" />
             Call Now

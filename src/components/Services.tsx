@@ -104,7 +104,7 @@ function ServiceCard({
         </p>
         <a
           href="#estimate"
-          className="inline-flex items-center px-6 py-2.5 bg-[#FA7864] text-white font-semibold rounded-lg hover:bg-[#E8634F] transition-all text-sm hover:-translate-y-0.5 shadow-md shadow-[#FA7864]/20"
+          className="inline-flex items-center px-6 py-2.5 bg-[#FA7864] text-white font-semibold rounded-full hover:bg-[#E8634F] transition-all text-sm hover:-translate-y-0.5 shadow-md shadow-[#FA7864]/20"
         >
           Get a Quote
         </a>

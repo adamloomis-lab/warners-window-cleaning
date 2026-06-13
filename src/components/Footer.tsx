@@ -27,7 +27,7 @@ export default function Footer() {
               href="https://www.facebook.com/yourcleanwindows/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 rounded-lg hover:bg-[#FA7864]/30 transition-all duration-300 text-white/80 hover:text-white text-sm"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 rounded-full hover:bg-[#FA7864]/30 transition-all duration-300 text-white/80 hover:text-white text-sm"
             >
               <Facebook className="w-4 h-4" />
               Follow Us on Facebook

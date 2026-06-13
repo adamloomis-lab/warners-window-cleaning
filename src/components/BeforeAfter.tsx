@@ -124,10 +124,10 @@ function BeforeAfterSlider({ before, after, label }: SliderPair) {
         </div>
 
         {/* Labels */}
-        <div className="absolute top-4 left-4 z-20 px-3 py-1.5 bg-[#1A1A1A]/80 backdrop-blur-sm text-white text-xs font-bold rounded-full tracking-wider uppercase pointer-events-none">
+        <div className="absolute top-4 left-4 z-20 px-3 py-1.5 bg-[#1A1A1A]/80 backdrop-blur-sm text-white text-xs font-medium rounded-full tracking-wider uppercase pointer-events-none">
           Before
         </div>
-        <div className="absolute top-4 right-4 z-20 px-3 py-1.5 bg-[#FA7864]/80 backdrop-blur-sm text-white text-xs font-bold rounded-full tracking-wider uppercase pointer-events-none">
+        <div className="absolute top-4 right-4 z-20 px-3 py-1.5 bg-[#FA7864]/80 backdrop-blur-sm text-white text-xs font-medium rounded-full tracking-wider uppercase pointer-events-none">
           After
         </div>
 

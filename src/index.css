@@ -288,10 +288,8 @@ html {
 
 /* Gradient text utility */
 .text-gradient {
-  background: linear-gradient(135deg, #FA7864 0%, #6BB5FF 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--color-coral);
+  font-style: italic;
 }
 
 /* Soft glow for icons */

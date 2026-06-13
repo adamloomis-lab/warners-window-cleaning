@@ -39,13 +39,13 @@ export default function Hero() {
           <div className="mt-9 flex flex-col sm:flex-row gap-4">
             <a
               href="#estimate"
-              className="btn-shimmer inline-flex items-center justify-center px-8 py-4 bg-[#FA7864] text-white font-bold rounded-lg hover:bg-[#E8634F] transition-all text-base shadow-xl shadow-[#FA7864]/30 hover:shadow-[#FA7864]/50 hover:-translate-y-0.5"
+              className="inline-flex items-center justify-center px-8 py-4 bg-[#FA7864] text-white font-medium rounded-full hover:bg-[#E8634F] transition-all text-base hover:-translate-y-0.5"
             >
               Get Your Free Estimate
             </a>
             <a
               href="tel:3302031654"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-md border-2 border-white/25 text-white font-bold rounded-lg hover:bg-white/20 hover:border-white/40 transition-all text-base hover:-translate-y-0.5"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-md border border-white/30 text-white font-medium rounded-full hover:bg-white/20 hover:border-white/60 transition-all text-base hover:-translate-y-0.5"
             >
               <Phone className="w-5 h-5" />
               Call (330) 203-1654

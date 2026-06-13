@@ -46,7 +46,7 @@ export default function VideoBreak() {
           <div className="mt-6 flex justify-center">
             <a
               href="#estimate"
-              className="btn-shimmer inline-flex items-center px-8 py-3.5 bg-[#FA7864] text-white font-bold rounded-lg hover:bg-[#E8634F] transition-all text-base shadow-xl shadow-[#FA7864]/30 hover:shadow-[#FA7864]/50 hover:-translate-y-0.5"
+              className="inline-flex items-center px-8 py-3.5 bg-[#FA7864] text-white font-medium rounded-full hover:bg-[#E8634F] transition-all text-base shadow-xl shadow-[#FA7864]/30 hover:shadow-[#FA7864]/50 hover:-translate-y-0.5"
             >
               Get Your Free Estimate
             </a>

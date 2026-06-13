@@ -58,7 +58,7 @@ export default function Header() {
         {/* Desktop CTA */}
         <a
           href="/#estimate"
-          className="hidden lg:inline-flex items-center px-5 py-2.5 bg-[#FA7864] text-white font-semibold rounded-lg hover:bg-[#E8634F] transition-all text-sm shadow-md shadow-[#FA7864]/20 hover:shadow-lg hover:shadow-[#FA7864]/30 hover:-translate-y-0.5"
+          className="hidden lg:inline-flex items-center px-5 py-2.5 bg-[#FA7864] text-white font-semibold rounded-full hover:bg-[#E8634F] transition-all text-sm shadow-md shadow-[#FA7864]/20 hover:shadow-lg hover:shadow-[#FA7864]/30 hover:-translate-y-0.5"
         >
           Free Estimate
         </a>
