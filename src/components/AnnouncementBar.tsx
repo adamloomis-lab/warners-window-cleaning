@@ -14,14 +14,14 @@ export default function AnnouncementBar() {
       <div className="absolute inset-0 bg-gradient-to-r from-[#1A1A1A] via-[#163a5e] to-[#1A1A1A]" />
       <div className="container flex items-center justify-center gap-3 flex-wrap relative z-10">
         {banner.link ? (
-          <a href={banner.link} className="text-white/90 hover:text-[#FA7864] transition-colors">{message}</a>
+          <a href={banner.link} className="text-white/90 hover:text-[#4A90D9] transition-colors">{message}</a>
         ) : (
           <span className="text-white/90">{message}</span>
         )}
         <span className="hidden sm:inline text-white/40">—</span>
         <a
           href="tel:3302031654"
-          className="inline-flex items-center gap-1.5 font-semibold hover:text-[#FA7864] transition-colors"
+          className="inline-flex items-center gap-1.5 font-semibold hover:text-[#4A90D9] transition-colors"
         >
           <Phone className="w-3.5 h-3.5" />
           Call or Text (330) 203-1654
@@ -31,7 +31,7 @@ export default function AnnouncementBar() {
           href="https://www.facebook.com/yourcleanwindows/"
           target="_blank"
           rel="noopener noreferrer"
-          className="hidden md:inline-flex items-center gap-1.5 font-medium hover:text-[#FA7864] transition-colors text-white/80"
+          className="hidden md:inline-flex items-center gap-1.5 font-medium hover:text-[#4A90D9] transition-colors text-white/80"
         >
           <Facebook className="w-3.5 h-3.5" />
           Facebook

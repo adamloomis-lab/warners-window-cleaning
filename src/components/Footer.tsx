@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer className="bg-[#1A1A1A] text-white relative overflow-hidden">
       {/* Subtle decorative element */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-[#FA7864]/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+      <div className="absolute top-0 right-0 w-96 h-96 bg-[#4A90D9]/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
 
       <div className="container py-12 md:py-16 relative z-10">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
@@ -27,7 +27,7 @@ export default function Footer() {
               href="https://www.facebook.com/yourcleanwindows/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 rounded-full hover:bg-[#FA7864]/30 transition-all duration-300 text-white/80 hover:text-white text-sm"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 rounded-full hover:bg-[#4A90D9]/30 transition-all duration-300 text-white/80 hover:text-white text-sm"
             >
               <Facebook className="w-4 h-4" />
               Follow Us on Facebook
@@ -39,13 +39,13 @@ export default function Footer() {
             <h3 className="font-bold text-lg mb-4">Contact</h3>
             <ul className="space-y-3">
               <li>
-                <a href="tel:3302031654" className="flex items-start gap-3 text-white/80 hover:text-[#FA7864] transition-colors text-sm">
+                <a href="tel:3302031654" className="flex items-start gap-3 text-white/80 hover:text-[#4A90D9] transition-colors text-sm">
                   <Phone className="w-4 h-4 mt-0.5 flex-shrink-0" />
                   (330) 203-1654
                 </a>
               </li>
               <li>
-                <a href="mailto:info@warnerswindowcleaning.com" className="flex items-start gap-3 text-white/80 hover:text-[#FA7864] transition-colors text-sm">
+                <a href="mailto:info@warnerswindowcleaning.com" className="flex items-start gap-3 text-white/80 hover:text-[#4A90D9] transition-colors text-sm">
                   <Mail className="w-4 h-4 mt-0.5 flex-shrink-0" />
                   info@warnerswindowcleaning.com
                 </a>

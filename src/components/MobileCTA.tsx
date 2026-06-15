@@ -6,7 +6,7 @@ export default function MobileCTA() {
       <div className="flex gap-3">
         <a
           href="#estimate"
-          className="flex-1 flex items-center justify-center px-4 py-3 bg-[#FA7864] text-white font-medium rounded-full hover:bg-[#E8634F] transition-all text-sm shadow-md shadow-[#FA7864]/25"
+          className="flex-1 flex items-center justify-center px-4 py-3 bg-[#4A90D9] text-white font-medium rounded-full hover:bg-[#3a7bc8] transition-all text-sm shadow-md shadow-[#4A90D9]/25"
         >
           Get Free Estimate
         </a>

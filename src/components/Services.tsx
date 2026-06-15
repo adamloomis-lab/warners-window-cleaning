@@ -79,7 +79,7 @@ function ServiceCard({
   return (
     <div
       ref={cardRef}
-      className="group bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-sm hover:shadow-xl hover:shadow-[#FA7864]/10 transition-shadow duration-500"
+      className="group bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-sm hover:shadow-xl hover:shadow-[#4A90D9]/10 transition-shadow duration-500"
       style={{
         opacity: isVisible ? 1 : 0,
         transform: isVisible ? "translate(0, 0)" : getInitialTransform(),
@@ -104,7 +104,7 @@ function ServiceCard({
         </p>
         <a
           href="#estimate"
-          className="inline-flex items-center px-6 py-2.5 bg-[#FA7864] text-white font-semibold rounded-full hover:bg-[#E8634F] transition-all text-sm hover:-translate-y-0.5 shadow-md shadow-[#FA7864]/20"
+          className="inline-flex items-center px-6 py-2.5 bg-[#4A90D9] text-white font-semibold rounded-full hover:bg-[#3a7bc8] transition-all text-sm hover:-translate-y-0.5 shadow-md shadow-[#4A90D9]/20"
         >
           Get a Quote
         </a>
@@ -120,7 +120,7 @@ export default function Services() {
     <section id="services" className="py-16 md:py-24 bg-white">
       <div className="container">
         <div ref={headerRef} className="text-center max-w-2xl mx-auto mb-14">
-          <span className="inline-block px-4 py-1.5 bg-[#FFF5E6] text-[#FA7864] text-sm font-semibold rounded-full mb-4 tracking-wide uppercase">
+          <span className="inline-block px-4 py-1.5 bg-[#FFF5E6] text-[#4A90D9] text-sm font-semibold rounded-full mb-4 tracking-wide uppercase">
             What We Do
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-[#1A1A1A]">

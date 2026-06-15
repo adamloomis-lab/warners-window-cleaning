@@ -219,7 +219,7 @@ export default function WorkGallery() {
     <section className="py-16 md:py-24 bg-white">
       <div className="container">
         <div ref={headerRef} className="text-center max-w-2xl mx-auto mb-14">
-          <span className="inline-block px-4 py-1.5 bg-[#FFF5E6] text-[#FA7864] text-sm font-semibold rounded-full mb-4 tracking-wide uppercase">
+          <span className="inline-block px-4 py-1.5 bg-[#FFF5E6] text-[#4A90D9] text-sm font-semibold rounded-full mb-4 tracking-wide uppercase">
             Portfolio
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-[#1A1A1A]">
@@ -258,7 +258,7 @@ export default function WorkGallery() {
                 {/* Hover overlay with label */}
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A1A]/60 via-[#1A1A1A]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-400" />
                 <div className="absolute bottom-0 left-0 right-0 p-3 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                  <span className="inline-block px-3 py-1 bg-[#FA7864] text-white text-xs font-semibold rounded-full">
+                  <span className="inline-block px-3 py-1 bg-[#4A90D9] text-white text-xs font-semibold rounded-full">
                     {img.label}
                   </span>
                 </div>

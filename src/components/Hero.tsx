@@ -23,7 +23,7 @@ export default function Hero() {
       </div>
 
       {/* Decorative floating elements */}
-      <div className="absolute top-20 right-20 w-32 h-32 bg-[#FA7864]/10 rounded-full blur-3xl animate-float hidden lg:block" />
+      <div className="absolute top-20 right-20 w-32 h-32 bg-[#4A90D9]/10 rounded-full blur-3xl animate-float hidden lg:block" />
       <div className="absolute bottom-16 right-40 w-20 h-20 bg-white/5 rounded-full blur-2xl animate-float" style={{ animationDelay: '1.5s' }} />
 
       {/* Content with staggered entrance */}
@@ -39,7 +39,7 @@ export default function Hero() {
           <div className="mt-9 flex flex-col sm:flex-row gap-4">
             <a
               href="#estimate"
-              className="inline-flex items-center justify-center px-8 py-4 bg-[#FA7864] text-white font-medium rounded-full hover:bg-[#E8634F] transition-all text-base hover:-translate-y-0.5"
+              className="inline-flex items-center justify-center px-8 py-4 bg-[#4A90D9] text-white font-medium rounded-full hover:bg-[#3a7bc8] transition-all text-base hover:-translate-y-0.5"
             >
               Get Your Free Estimate
             </a>

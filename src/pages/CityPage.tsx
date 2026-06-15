@@ -61,7 +61,7 @@ export default function CityPage() {
           </p>
           <a
             href="/"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-[#FA7864] text-white font-semibold rounded-full hover:bg-[#E8634F] transition-colors"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-[#4A90D9] text-white font-semibold rounded-full hover:bg-[#3a7bc8] transition-colors"
           >
             <ChevronLeft className="w-4 h-4" />
             Back to Home
@@ -126,14 +126,14 @@ export default function CityPage() {
           <div className="flex items-center gap-4">
             <a
               href="tel:3302031654"
-              className="hidden sm:inline-flex items-center gap-2 text-[#1A1A1A] font-semibold text-sm hover:text-[#FA7864] transition-colors"
+              className="hidden sm:inline-flex items-center gap-2 text-[#1A1A1A] font-semibold text-sm hover:text-[#4A90D9] transition-colors"
             >
               <Phone className="w-4 h-4" />
               (330) 203-1654
             </a>
             <a
               href="/#estimate"
-              className="inline-flex items-center px-5 py-2.5 bg-[#FA7864] text-white font-semibold rounded-full hover:bg-[#E8634F] transition-all text-sm shadow-md shadow-[#FA7864]/20"
+              className="inline-flex items-center px-5 py-2.5 bg-[#4A90D9] text-white font-semibold rounded-full hover:bg-[#3a7bc8] transition-all text-sm shadow-md shadow-[#4A90D9]/20"
             >
               Free Estimate
             </a>
@@ -169,7 +169,7 @@ export default function CityPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/#estimate"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#FA7864] text-white font-medium rounded-full hover:bg-[#E8634F] transition-all shadow-lg shadow-[#FA7864]/30 hover:-translate-y-0.5 text-base"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#4A90D9] text-white font-medium rounded-full hover:bg-[#3a7bc8] transition-all shadow-lg shadow-[#4A90D9]/30 hover:-translate-y-0.5 text-base"
               >
                 Get Your Free Estimate
                 <ArrowRight className="w-4 h-4" />
@@ -219,7 +219,7 @@ export default function CityPage() {
                   key={service}
                   className="flex items-center gap-3 p-4 bg-white rounded-xl shadow-sm"
                 >
-                  <CheckCircle className="w-5 h-5 text-[#FA7864] flex-shrink-0" />
+                  <CheckCircle className="w-5 h-5 text-[#4A90D9] flex-shrink-0" />
                   <span className="text-[#1A1A1A] font-medium text-base">
                     {service}
                   </span>
@@ -242,7 +242,7 @@ export default function CityPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/#estimate"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#FA7864] text-white font-medium rounded-full hover:bg-[#E8634F] transition-all shadow-lg shadow-[#FA7864]/30 hover:-translate-y-0.5 text-base"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#4A90D9] text-white font-medium rounded-full hover:bg-[#3a7bc8] transition-all shadow-lg shadow-[#4A90D9]/30 hover:-translate-y-0.5 text-base"
               >
                 Request Free Estimate
                 <ArrowRight className="w-4 h-4" />
@@ -324,7 +324,7 @@ export default function CityPage() {
                       e.preventDefault();
                       setLocation(`/window-cleaning/${c.slug}`);
                     }}
-                    className="px-4 py-2 bg-white border border-gray-200 rounded-full text-sm font-medium text-[#1A1A1A] hover:border-[#FA7864] hover:text-[#FA7864] transition-all"
+                    className="px-4 py-2 bg-white border border-gray-200 rounded-full text-sm font-medium text-[#1A1A1A] hover:border-[#4A90D9] hover:text-[#4A90D9] transition-all"
                   >
                     {c.name}, OH
                   </a>
@@ -386,7 +386,7 @@ export default function CityPage() {
         <div className="flex gap-3 p-3">
           <a
             href="/#estimate"
-            className="flex-1 flex items-center justify-center gap-2 py-3 bg-[#FA7864] text-white font-bold rounded-lg text-sm shadow-md"
+            className="flex-1 flex items-center justify-center gap-2 py-3 bg-[#4A90D9] text-white font-bold rounded-lg text-sm shadow-md"
           >
             Get Free Estimate
           </a>

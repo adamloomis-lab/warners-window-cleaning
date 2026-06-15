@@ -28,9 +28,9 @@ export default function LegalPage({
       <main className="flex-1">
         {/* Page hero */}
         <section className="relative bg-[#1A1A1A] text-white pt-20 pb-12 md:pt-28 md:pb-16 overflow-hidden">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-[#FA7864]/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+          <div className="absolute top-0 right-0 w-96 h-96 bg-[#4A90D9]/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
           <div className="container relative z-10">
-            <span className="inline-block px-4 py-1.5 bg-white/10 text-[#FA7864] text-sm font-semibold rounded-full mb-4 tracking-wide uppercase">
+            <span className="inline-block px-4 py-1.5 bg-white/10 text-[#4A90D9] text-sm font-semibold rounded-full mb-4 tracking-wide uppercase">
               {eyebrow}
             </span>
             <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight">{title}</h1>

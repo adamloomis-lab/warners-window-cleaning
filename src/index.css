@@ -4,7 +4,7 @@
 
 /*
   DESIGN SYSTEM: "Clear Sky" — Modern Service Brand
-  Colors: Navy #1A1A1A, Sky Blue #FA7864, Light Blue #FFF5E6, White #FFFFFF, Charcoal #1A1A1A
+  Colors: Navy #1A1A1A, Sky Blue #4A90D9, Light Blue #FFF5E6, White #FFFFFF, Charcoal #1A1A1A
   Fonts: Plus Jakarta Sans (headings), DM Sans (body)
   Philosophy: Bright, airy, optimistic — like looking through a freshly cleaned window
 */
@@ -56,9 +56,9 @@
   --color-truffle: #4A4A4A;       /* secondary text */
   --color-ash: #6B6B6B;           /* muted/tertiary text */
   --color-border-warm: #E5E0D6;   /* soft warm border */
-  --color-coral: #FA7864;         /* primary action accent */
-  --color-coral-deep: #E8634F;    /* hover/pressed state */
-  --color-desert-rose: #DC8264;   /* secondary accent */
+  --color-coral: #4A90D9;         /* primary action accent */
+  --color-coral-deep: #3a7bc8;    /* hover/pressed state */
+  --color-desert-rose: #4A90D9;   /* secondary accent */
   --color-navy-foot: #1A1A1A;     /* ink footer (replaces navy) */
 
   /* Font families */
@@ -353,11 +353,11 @@ html {
 }
 .legal-prose li { margin: 0.25em 0; }
 .legal-prose a {
-  color: #FA7864;
+  color: #4A90D9;
   text-decoration: underline;
   text-underline-offset: 2px;
 }
-.legal-prose a:hover { color: #E8634F; }
+.legal-prose a:hover { color: #3a7bc8; }
 .legal-prose strong { color: #1A1A1A; }
 .legal-prose em { color: #6b7280; font-style: italic; }
 

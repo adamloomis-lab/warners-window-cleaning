@@ -1,7 +1,7 @@
 {
   "banner": {
-    "enabled": true,
-    "message": "Fall gutter and window cleaning now booking. Call today!",
+    "enabled": false,
+    "message": "",
     "link": ""
   }
 }

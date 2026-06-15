@@ -48,7 +48,7 @@ export default function Header() {
             <a
               key={link.href}
               href={link.href}
-              className="text-[#1A1A1A] font-medium text-[15px] hover:text-[#FA7864] transition-colors duration-200 relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-[#FA7864] after:transition-all after:duration-300 hover:after:w-full"
+              className="text-[#1A1A1A] font-medium text-[15px] hover:text-[#4A90D9] transition-colors duration-200 relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-[#4A90D9] after:transition-all after:duration-300 hover:after:w-full"
             >
               {link.label}
             </a>
@@ -58,7 +58,7 @@ export default function Header() {
         {/* Desktop CTA */}
         <a
           href="/#estimate"
-          className="hidden lg:inline-flex items-center px-5 py-2.5 bg-[#FA7864] text-white font-semibold rounded-full hover:bg-[#E8634F] transition-all text-sm shadow-md shadow-[#FA7864]/20 hover:shadow-lg hover:shadow-[#FA7864]/30 hover:-translate-y-0.5"
+          className="hidden lg:inline-flex items-center px-5 py-2.5 bg-[#4A90D9] text-white font-semibold rounded-full hover:bg-[#3a7bc8] transition-all text-sm shadow-md shadow-[#4A90D9]/20 hover:shadow-lg hover:shadow-[#4A90D9]/30 hover:-translate-y-0.5"
         >
           Free Estimate
         </a>
@@ -87,7 +87,7 @@ export default function Header() {
                 key={link.href}
                 href={link.href}
                 onClick={handleNavClick}
-                className="py-3 px-4 text-[#1A1A1A] font-medium hover:bg-[#FFF5E6] hover:text-[#FA7864] rounded-lg transition-colors"
+                className="py-3 px-4 text-[#1A1A1A] font-medium hover:bg-[#FFF5E6] hover:text-[#4A90D9] rounded-lg transition-colors"
               >
                 {link.label}
               </a>
@@ -95,7 +95,7 @@ export default function Header() {
             <a
               href="/#estimate"
               onClick={handleNavClick}
-              className="mt-2 mx-4 text-center py-3 bg-[#FA7864] text-white font-semibold rounded-lg hover:bg-[#E8634F] transition-colors shadow-md"
+              className="mt-2 mx-4 text-center py-3 bg-[#4A90D9] text-white font-semibold rounded-lg hover:bg-[#3a7bc8] transition-colors shadow-md"
             >
               Get Free Estimate
             </a>
