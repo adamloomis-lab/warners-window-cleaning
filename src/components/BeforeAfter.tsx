@@ -154,11 +154,6 @@ export default function BeforeAfter() {
       after: "/images/after-window.jpg",
       label: "Exterior Window Cleaning",
     },
-    {
-      before: "/images/sunroom-exterior.jpg",
-      after: "/images/sunroom-interior.jpg",
-      label: "",
-    },
   ];
 
   return (
@@ -176,7 +171,7 @@ export default function BeforeAfter() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+        <div className="max-w-xl mx-auto">
           {pairs.map((pair, i) => (
             <div key={i}>
               <BeforeAfterSlider {...pair} />
