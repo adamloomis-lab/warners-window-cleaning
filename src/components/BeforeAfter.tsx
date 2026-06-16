@@ -138,7 +138,9 @@ function BeforeAfterSlider({ before, after, label }: SliderPair) {
           </div>
         )}
       </div>
-      <p className="text-sm font-semibold text-[#1A1A1A]/60 text-center tracking-wide">{label}</p>
+      {label && (
+        <p className="text-sm font-semibold text-[#1A1A1A]/60 text-center tracking-wide">{label}</p>
+      )}
     </div>
   );
 }
@@ -155,7 +157,7 @@ export default function BeforeAfter() {
     {
       before: "/images/sunroom-exterior.jpg",
       after: "/images/sunroom-interior.jpg",
-      label: "Skylight Cleaning",
+      label: "",
     },
   ];
 
