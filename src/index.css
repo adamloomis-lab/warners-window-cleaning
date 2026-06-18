@@ -443,3 +443,38 @@ html {
   border: 1px solid var(--color-border-warm);
   border-radius: 20px;
 }
+
+/* ========== FAN CARD CAROUSEL ========== */
+.fan-layout {
+  height: 22rem;
+}
+.fan-card {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -7rem;
+  width: 14rem;
+  height: 19rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  background: var(--color-card);
+  box-shadow: 0 12px 36px rgba(0,0,0,0.12), 0 2px 6px rgba(0,0,0,0.06);
+  will-change: transform, opacity;
+  border: 1px solid var(--color-border-warm);
+}
+@media (min-width: 480px) {
+  .fan-layout { height: 26rem; }
+  .fan-card { width: 15rem; height: 22rem; margin-left: -7.5rem; }
+}
+@media (min-width: 640px) {
+  .fan-layout { height: 28rem; }
+  .fan-card { width: 16rem; height: 24rem; margin-left: -8rem; }
+}
+@media (min-width: 768px) {
+  .fan-layout { height: 34rem; }
+  .fan-card { width: 18rem; height: 28rem; margin-left: -9rem; }
+}
+@media (min-width: 1024px) {
+  .fan-layout { height: 38rem; }
+  .fan-card { width: 20rem; height: 32rem; margin-left: -10rem; }
+}
