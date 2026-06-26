@@ -9,42 +9,46 @@ export default function Accessibility() {
       metaTitle={`Accessibility Statement | ${BUSINESS.name}`}
       metaDescription={`${BUSINESS.name} is committed to making our website accessible to everyone.`}
     >
-      <p><strong>Last updated: {new Date().getFullYear()}</strong></p>
-      <p>
-        {BUSINESS.legalName} is committed to making our website accessible to everyone, including
-        people with disabilities. We want every visitor to be able to learn about our services
-        and get in touch with us easily.
-      </p>
+      <p><strong>Last updated: June 2026</strong></p>
 
       <h2>Our Commitment</h2>
       <p>
-        We strive to conform to the Web Content Accessibility Guidelines (WCAG) 2.1 Level AA.
-        These guidelines explain how to make web content more accessible for people with a wide
-        range of disabilities, including visual, auditory, motor, and cognitive limitations.
+        This site is built to WCAG 2.1 AA, the standard referenced by the ADA for web
+        accessibility. We review and update our accessibility practices on an ongoing basis.
       </p>
 
-      <h2>Measures We Take</h2>
+      <h2>What We Have Done</h2>
+      <p>
+        We have taken the following steps to make this site more accessible to all visitors:
+      </p>
       <ul>
-        <li>Using clear structure, headings, and readable color contrast;</li>
-        <li>Providing descriptive text alternatives for meaningful images;</li>
-        <li>Supporting keyboard navigation and legible, resizable text;</li>
-        <li>Designing forms with clearly associated labels and inline error messages.</li>
+        <li>
+          Skip links let keyboard and screen reader users bypass navigation and get straight to
+          the main content without tabbing through every menu item.
+        </li>
+        <li>
+          A visible outline appears on every interactive element when navigated by keyboard, so
+          focus is always clear.
+        </li>
+        <li>
+          Text colors meet the 4.5:1 minimum contrast ratio for readability by people with low
+          vision.
+        </li>
+        <li>
+          All form fields, buttons, and interactive elements have descriptive labels so screen
+          readers can announce them accurately.
+        </li>
+        <li>
+          Animations automatically reduce for users who have the Reduce Motion preference enabled
+          on their device.
+        </li>
       </ul>
 
-      <h2>Known Limitations</h2>
+      <h2>Report an Issue</h2>
       <p>
-        Despite our efforts, some content — particularly third-party embedded maps, social media
-        widgets, or video tools — may not yet be fully accessible. We are continually working to
-        identify and improve these areas.
-      </p>
-
-      <h2>Need Help or Found an Issue?</h2>
-      <p>
-        If you experience any difficulty accessing part of our website, or have a suggestion to
-        help us improve, please contact us at{" "}
-        <a href={`mailto:${BUSINESS.email}`}>{BUSINESS.email}</a> or{" "}
-        <a href={`tel:${BUSINESS.phoneE164}`}>{BUSINESS.phone}</a>. We'll do our best to provide
-        the information you need through an alternative method and to address the issue promptly.
+        If you encounter any accessibility barrier on this site, please contact us and we will
+        address it promptly. You can reach us by phone at{" "}
+        <a href={`tel:${BUSINESS.phoneE164}`}>{BUSINESS.phone}</a>.
       </p>
     </LegalPage>
   );
