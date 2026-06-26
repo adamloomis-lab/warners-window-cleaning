@@ -13,7 +13,7 @@ export default function OurStory() {
         <div className="grid md:grid-cols-2 gap-10 lg:gap-16 items-center">
           {/* Left — Photos showcasing Wadsworth community */}
           <div ref={imgRef} className="relative">
-            <div className="absolute -top-6 -left-6 w-full h-full bg-[#4A90D9]/10 rounded-2xl -z-10 hidden md:block" />
+            <div className="absolute -top-6 -left-6 w-full h-full bg-[#1A5EA8]/10 rounded-2xl -z-10 hidden md:block" />
             <div className="rounded-2xl overflow-hidden shadow-xl">
               <img
                 src={WADSWORTH_IMG}
@@ -31,14 +31,14 @@ export default function OurStory() {
               />
             </div>
             <div className="absolute top-4 left-4 bg-[#1A1A1A] text-white px-4 py-2 rounded-full shadow-lg hidden md:flex flex-col items-center">
-              <span className="text-2xl font-extrabold text-[#4A90D9]">50+</span>
+              <span className="text-2xl font-extrabold text-[#1A5EA8]">50+</span>
               <span className="text-xs font-medium tracking-wide uppercase">Years</span>
             </div>
           </div>
 
           {/* Right — Text */}
           <div ref={textRef}>
-            <span className="inline-block px-4 py-1.5 bg-white text-[#4A90D9] text-sm font-semibold rounded-full mb-4 tracking-wide uppercase shadow-sm">
+            <span className="inline-block px-4 py-1.5 bg-white text-[#1A5EA8] text-sm font-semibold rounded-full mb-4 tracking-wide uppercase shadow-sm">
               Our Story
             </span>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-[#1A1A1A] mb-6">
@@ -57,8 +57,8 @@ export default function OurStory() {
               </p>
             </div>
             <div className="mt-8 flex items-center gap-4">
-              <div className="w-12 h-[2px] bg-[#4A90D9]" />
-              <span className="text-[#4A90D9] font-semibold text-sm tracking-wide uppercase">
+              <div className="w-12 h-[2px] bg-[#1A5EA8]" />
+              <span className="text-[#1A5EA8] font-semibold text-sm tracking-wide uppercase">
                 Family Owned & Operated
               </span>
             </div>

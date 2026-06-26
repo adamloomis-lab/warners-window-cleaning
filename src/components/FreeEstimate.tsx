@@ -42,7 +42,7 @@ const encode = (data: Record<string, string>) =>
     .join("&");
 
 const inputClass =
-  "w-full px-4 py-3 rounded-full border border-gray-200 focus:border-[#4A90D9] focus:ring-2 focus:ring-[#4A90D9]/20 outline-none transition-all text-[#1A1A1A] bg-gray-50/50 focus:bg-white text-base";
+  "w-full px-4 py-3 rounded-full border border-gray-200 focus:border-[#1A5EA8] focus:ring-2 focus:ring-[#1A5EA8]/20 outline-none transition-all text-[#1A1A1A] bg-gray-50/50 focus:bg-white text-base";
 const inputErrorClass =
   "w-full px-4 py-3 rounded-full border border-red-400 focus:border-red-500 focus:ring-2 focus:ring-red-200 outline-none transition-all text-[#1A1A1A] bg-red-50/40 focus:bg-white text-base";
 
@@ -95,14 +95,14 @@ export default function FreeEstimate() {
 
   return (
     <section id="estimate" className="py-16 md:py-24 bg-[#FFF5E6] relative overflow-hidden">
-      <div className="absolute top-0 right-0 w-96 h-96 bg-[#4A90D9]/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+      <div className="absolute top-0 right-0 w-96 h-96 bg-[#1A5EA8]/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
       <div className="absolute bottom-0 left-0 w-72 h-72 bg-[#1A1A1A]/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
 
       <div className="container relative z-10">
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16">
           {/* Left — Info */}
           <div ref={leftRef} className="min-w-0">
-            <span className="inline-block px-4 py-1.5 bg-white text-[#4A90D9] text-sm font-semibold rounded-full mb-4 tracking-wide uppercase shadow-sm">
+            <span className="inline-block px-4 py-1.5 bg-white text-[#1A5EA8] text-sm font-semibold rounded-full mb-4 tracking-wide uppercase shadow-sm">
               Contact Us
             </span>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-[#1A1A1A] mb-4">
@@ -117,7 +117,7 @@ export default function FreeEstimate() {
                 href="tel:3302031654"
                 className="flex items-center gap-4 group p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-0.5 min-w-0"
               >
-                <div className="w-12 h-12 rounded-xl bg-[#1A1A1A] flex items-center justify-center shrink-0 group-hover:bg-[#4A90D9] transition-colors duration-300">
+                <div className="w-12 h-12 rounded-xl bg-[#1A1A1A] flex items-center justify-center shrink-0 group-hover:bg-[#1A5EA8] transition-colors duration-300">
                   <Phone className="w-5 h-5 text-white" />
                 </div>
                 <div className="min-w-0">
@@ -130,7 +130,7 @@ export default function FreeEstimate() {
                 href="mailto:info@warnerswindowcleaning.com"
                 className="flex items-center gap-4 group p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-0.5 min-w-0"
               >
-                <div className="w-12 h-12 rounded-xl bg-[#1A1A1A] flex items-center justify-center shrink-0 group-hover:bg-[#4A90D9] transition-colors duration-300">
+                <div className="w-12 h-12 rounded-xl bg-[#1A1A1A] flex items-center justify-center shrink-0 group-hover:bg-[#1A5EA8] transition-colors duration-300">
                   <Mail className="w-5 h-5 text-white" />
                 </div>
                 <div className="min-w-0 overflow-hidden">
@@ -167,7 +167,7 @@ export default function FreeEstimate() {
                   <button
                     type="button"
                     onClick={() => setSubmitted(false)}
-                    className="block mx-auto mt-4 text-sm text-[#4A90D9] hover:underline"
+                    className="block mx-auto mt-4 text-sm text-[#1A5EA8] hover:underline"
                   >
                     Submit another request
                   </button>
@@ -332,7 +332,7 @@ export default function FreeEstimate() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-[#4A90D9] text-white font-medium rounded-full hover:bg-[#3a7bc8] transition-all disabled:opacity-60 disabled:cursor-not-allowed text-base shadow-lg shadow-[#4A90D9]/25 hover:shadow-[#4A90D9]/40 hover:-translate-y-0.5"
+                    className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-[#1A5EA8] text-white font-medium rounded-full hover:bg-[#164e90] transition-all disabled:opacity-60 disabled:cursor-not-allowed text-base shadow-lg shadow-[#1A5EA8]/25 hover:shadow-[#1A5EA8]/40 hover:-translate-y-0.5"
                   >
                     <Send className="w-4 h-4" />
                     {isSubmitting ? "Sending..." : "Request My Free Estimate"}

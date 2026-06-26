@@ -127,7 +127,7 @@ function BeforeAfterSlider({ before, after, label }: SliderPair) {
         <div className="absolute top-4 left-4 z-20 px-3 py-1.5 bg-[#1A1A1A]/80 backdrop-blur-sm text-white text-xs font-medium rounded-full tracking-wider uppercase pointer-events-none">
           Before
         </div>
-        <div className="absolute top-4 right-4 z-20 px-3 py-1.5 bg-[#4A90D9]/80 backdrop-blur-sm text-white text-xs font-medium rounded-full tracking-wider uppercase pointer-events-none">
+        <div className="absolute top-4 right-4 z-20 px-3 py-1.5 bg-[#1A5EA8]/80 backdrop-blur-sm text-white text-xs font-medium rounded-full tracking-wider uppercase pointer-events-none">
           After
         </div>
 
@@ -160,7 +160,7 @@ export default function BeforeAfter() {
     <section className="py-20 md:py-28 bg-gradient-to-b from-white to-[#FFF5E6]/40">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div ref={sectionRef} className="text-center mb-14">
-          <span className="inline-block px-4 py-1.5 bg-[#4A90D9]/10 text-[#4A90D9] text-xs font-bold uppercase tracking-[0.15em] rounded-full mb-4">
+          <span className="inline-block px-4 py-1.5 bg-[#1A5EA8]/10 text-[#1A5EA8] text-xs font-bold uppercase tracking-[0.15em] rounded-full mb-4">
             The Difference
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#1A1A1A] mb-4" style={{ fontFamily: "var(--font-heading)" }}>

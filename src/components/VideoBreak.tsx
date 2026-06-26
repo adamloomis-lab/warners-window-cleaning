@@ -46,7 +46,7 @@ export default function VideoBreak() {
           <div className="mt-6 flex justify-center">
             <a
               href="#estimate"
-              className="inline-flex items-center px-8 py-3.5 bg-[#4A90D9] text-white font-medium rounded-full hover:bg-[#3a7bc8] transition-all text-base shadow-xl shadow-[#4A90D9]/30 hover:shadow-[#4A90D9]/50 hover:-translate-y-0.5"
+              className="inline-flex items-center px-8 py-3.5 bg-[#1A5EA8] text-white font-medium rounded-full hover:bg-[#164e90] transition-all text-base shadow-xl shadow-[#1A5EA8]/30 hover:shadow-[#1A5EA8]/50 hover:-translate-y-0.5"
             >
               Get Your Free Estimate
             </a>

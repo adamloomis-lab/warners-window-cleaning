@@ -27,15 +27,15 @@ export default function ServiceArea() {
         ref={ref}
         className="container text-center relative z-10"
       >
-        <div className="w-16 h-16 rounded-2xl bg-[#4A90D9]/20 flex items-center justify-center mx-auto mb-6">
-          <MapPin className="w-8 h-8 text-[#4A90D9]" strokeWidth={1.5} />
+        <div className="w-16 h-16 rounded-2xl bg-[#1A5EA8]/20 flex items-center justify-center mx-auto mb-6">
+          <MapPin className="w-8 h-8 text-[#1A5EA8]" strokeWidth={1.5} />
         </div>
         <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-6">
           Our Service Area
         </h2>
         <p className="text-xl text-white/85 max-w-3xl mx-auto leading-relaxed">
           Proudly serving{" "}
-          <span className="font-semibold text-[#4A90D9]">
+          <span className="font-semibold text-[#1A5EA8]">
             {cities.map((c) => c.name).join(", ")}
           </span>
           , and surrounding communities throughout Northeast Ohio.
@@ -49,7 +49,7 @@ export default function ServiceArea() {
                 e.preventDefault();
                 setLocation(`/window-cleaning/${city.slug}`);
               }}
-              className="px-5 py-2.5 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-white text-sm font-medium hover:bg-[#4A90D9]/30 hover:border-[#4A90D9]/50 transition-all duration-300 cursor-pointer"
+              className="px-5 py-2.5 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-white text-sm font-medium hover:bg-[#1A5EA8]/30 hover:border-[#1A5EA8]/50 transition-all duration-300 cursor-pointer"
             >
               {city.name}, OH
             </a>

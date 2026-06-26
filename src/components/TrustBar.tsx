@@ -95,7 +95,7 @@ export default function TrustBar() {
                 }}
               >
                 {/* Glass card */}
-                <div className="relative rounded-xl bg-white/70 backdrop-blur-sm border border-white/80 shadow-sm p-6 text-center overflow-hidden transition-shadow duration-300 hover:shadow-lg hover:shadow-[#4A90D9]/10">
+                <div className="relative rounded-xl bg-white/70 backdrop-blur-sm border border-white/80 shadow-sm p-6 text-center overflow-hidden transition-shadow duration-300 hover:shadow-lg hover:shadow-[#1A5EA8]/10">
 
                   {/* Frost overlay that fades away */}
                   <div
@@ -122,7 +122,7 @@ export default function TrustBar() {
 
                   {/* Tiny water droplet that slides down after the streak */}
                   <div
-                    className="absolute left-[calc(50%+6px)] w-1.5 h-1.5 rounded-full bg-[#4A90D9]/30 pointer-events-none z-20"
+                    className="absolute left-[calc(50%+6px)] w-1.5 h-1.5 rounded-full bg-[#1A5EA8]/30 pointer-events-none z-20"
                     style={{
                       top: isVisible ? "105%" : "10%",
                       opacity: isVisible ? 0 : 0.6,
@@ -133,7 +133,7 @@ export default function TrustBar() {
                   {/* Icon */}
                   <div className="relative z-[5] flex justify-center mb-3">
                     <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#1A1A1A] to-[#1A1A1A] flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
-                      <item.icon className="w-6 h-6 text-[#4A90D9]" strokeWidth={1.8} />
+                      <item.icon className="w-6 h-6 text-[#1A5EA8]" strokeWidth={1.8} />
                     </div>
                   </div>
 

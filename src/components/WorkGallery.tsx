@@ -91,7 +91,7 @@ export default function WorkGallery() {
     <section id="our-work" className="py-16 md:py-24 bg-white overflow-hidden">
       <div className="container">
         <div ref={headerRef} className="text-center max-w-2xl mx-auto mb-10">
-          <span className="inline-block px-4 py-1.5 bg-[#FFF5E6] text-[#4A90D9] text-sm font-semibold rounded-full mb-4 tracking-wide uppercase">
+          <span className="inline-block px-4 py-1.5 bg-[#FFF5E6] text-[#1A5EA8] text-sm font-semibold rounded-full mb-4 tracking-wide uppercase">
             Portfolio
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-[#1A1A1A]">
