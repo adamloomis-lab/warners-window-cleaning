@@ -101,7 +101,7 @@ export default function Footer() {
         <div className="container py-3 flex items-center justify-center gap-2 relative z-10">
           <span className="text-white/40 text-xs">Website by</span>
           <a
-            href="https://adamloomis.online"
+            href="https://adamloomismarketing.com"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1.5 text-white/50 hover:text-white transition-colors"
@@ -111,7 +111,7 @@ export default function Footer() {
               alt="Adam Loomis Marketing"
               className="h-4 w-auto brightness-0 invert opacity-50 hover:opacity-100 transition-opacity"
             />
-            <span className="text-xs font-medium">adamloomis.online</span>
+            <span className="text-xs font-medium">Adam Loomis Marketing</span>
           </a>
         </div>
       </div>
