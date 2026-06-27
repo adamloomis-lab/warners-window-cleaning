@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { createPortal } from "react-dom";
 import { X, Phone, MapPin, Clock, ArrowRight, Facebook } from "lucide-react";
 
 const LOGO_URL = "/images/warners-logo.webp";
@@ -27,7 +28,7 @@ export default function MobileMenu({ open, shown, onClose, navLinks }: MobileMen
 
   if (!open) return null;
 
-  return (
+  return createPortal(
     <div
       className="lg:hidden fixed inset-0 z-[60]"
       role="dialog"
@@ -76,8 +77,8 @@ export default function MobileMenu({ open, shown, onClose, navLinks }: MobileMen
                 key={l.href}
                 href={l.href}
                 onClick={onClose}
-                className={`group flex items-center justify-between border-b border-white/10 py-4 font-display text-2xl uppercase text-white/90 transition-all duration-500 hover:text-[#8fb8e0] ${
-                  shown ? "opacity-100 translate-x-0" : "opacity-0 translate-x-6"
+                className={`group flex items-center justify-between border-b border-white/10 py-4 font-display text-2xl uppercase text-white/90 transition-transform duration-500 motion-reduce:transition-none hover:text-[#8fb8e0] ${
+                  shown ? "translate-x-0" : "translate-x-6"
                 }`}
                 style={{ transitionDelay: `${120 + i * 70}ms` }}
               >
@@ -91,8 +92,8 @@ export default function MobileMenu({ open, shown, onClose, navLinks }: MobileMen
           </nav>
 
           <div
-            className={`mt-8 flex flex-col gap-3 transition-all duration-500 ${
-              shown ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+            className={`mt-8 flex flex-col gap-3 transition-transform duration-500 motion-reduce:transition-none ${
+              shown ? "translate-y-0" : "translate-y-4"
             }`}
             style={{ transitionDelay: `${120 + navLinks.length * 70 + 60}ms` }}
           >
@@ -129,6 +130,7 @@ export default function MobileMenu({ open, shown, onClose, navLinks }: MobileMen
           </div>
         </div>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 }

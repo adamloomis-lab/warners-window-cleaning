@@ -28,9 +28,13 @@ export default function Header() {
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
-      const id = requestAnimationFrame(() => setShown(true));
+      let inner = 0;
+      const id = requestAnimationFrame(() => {
+        inner = requestAnimationFrame(() => setShown(true));
+      });
       return () => {
         cancelAnimationFrame(id);
+        cancelAnimationFrame(inner);
         document.body.style.overflow = "";
       };
     }
