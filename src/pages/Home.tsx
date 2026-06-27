@@ -17,6 +17,7 @@ import ServiceArea from "@/components/ServiceArea";
 import FreeEstimate from "@/components/FreeEstimate";
 import Footer from "@/components/Footer";
 import MobileCTA from "@/components/MobileCTA";
+import StickyEstimate from "@/components/StickyEstimate";
 
 export default function Home() {
   return (
@@ -40,6 +41,7 @@ export default function Home() {
       {/* Bottom padding on mobile so footer content isn't hidden behind sticky CTA */}
       <div className="h-20 lg:hidden" />
       <MobileCTA />
+      <StickyEstimate />
     </div>
   );
 }

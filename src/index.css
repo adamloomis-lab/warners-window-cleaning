@@ -499,3 +499,41 @@ html {
   outline: 2px solid #1A5EA8;
   outline-offset: 3px;
 }
+
+/* ========== ELEVATED CTA / FORM MOTION ========== */
+/* Soft glow pulse for the primary floating CTA */
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 14px 40px -10px rgba(26, 94, 168, 0.55), 0 0 0 0 rgba(26, 94, 168, 0.45); }
+  50% { box-shadow: 0 18px 48px -8px rgba(26, 94, 168, 0.7), 0 0 0 8px rgba(26, 94, 168, 0); }
+}
+.animate-glow-pulse {
+  animation: glow-pulse 2.6s ease-in-out infinite;
+}
+
+/* Sheen sweep across a button on hover */
+@keyframes sheen {
+  0% { transform: translateX(-120%) skewX(-12deg); }
+  100% { transform: translateX(320%) skewX(-12deg); }
+}
+
+/* Pulsing trust dot in the mobile menu badge */
+@keyframes pulse-soft {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.55; transform: scale(0.78); }
+}
+.animate-pulse-soft {
+  animation: pulse-soft 1.8s ease-in-out infinite;
+}
+
+/* Drawn checkmark for the personalized thank-you state */
+@keyframes draw-check {
+  to { stroke-dashoffset: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-glow-pulse,
+  .animate-pulse-soft {
+    animation: none !important;
+  }
+  .sheen-on-hover { display: none !important; }
+}

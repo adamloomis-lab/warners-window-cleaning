@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu } from "lucide-react";
+import MobileMenu from "@/components/MobileMenu";
 
 const LOGO_URL = "/images/warners-logo.webp";
 
@@ -14,6 +15,7 @@ const navLinks = [
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [shown, setShown] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -22,7 +24,19 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const handleNavClick = () => setIsOpen(false);
+  // Slide-in animation + body scroll lock while the mobile menu is open.
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+      const id = requestAnimationFrame(() => setShown(true));
+      return () => {
+        cancelAnimationFrame(id);
+        document.body.style.overflow = "";
+      };
+    }
+    setShown(false);
+    document.body.style.overflow = "";
+  }, [isOpen]);
 
   return (
     <header
@@ -71,44 +85,22 @@ export default function Header() {
 
         {/* Mobile Menu Button */}
         <button
-          onClick={() => setIsOpen(!isOpen)}
+          onClick={() => setIsOpen(true)}
           className="lg:hidden p-2 text-[#1A1A1A] hover:bg-[#FFF5E6] rounded-lg transition-colors"
-          aria-label={isOpen ? "Close menu" : "Open menu"}
+          aria-label="Open menu"
           aria-expanded={isOpen}
         >
-          {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          <Menu className="w-6 h-6" />
         </button>
       </div>
 
-      {/* Mobile Nav — slide down */}
-      <div
-        className={`lg:hidden overflow-hidden transition-all duration-300 ease-in-out ${
-          isOpen ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"
-        }`}
-        inert={!isOpen || undefined}
-      >
-        <div className="border-t border-gray-100 bg-white">
-          <nav className="container py-4 flex flex-col gap-1" aria-label="Mobile navigation">
-            {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                onClick={handleNavClick}
-                className="py-3 px-4 text-[#1A1A1A] font-medium hover:bg-[#FFF5E6] hover:text-[#1A5EA8] rounded-lg transition-colors"
-              >
-                {link.label}
-              </a>
-            ))}
-            <a
-              href="/#estimate"
-              onClick={handleNavClick}
-              className="mt-2 mx-4 text-center py-3 bg-[#1A5EA8] text-white font-semibold rounded-lg hover:bg-[#164e90] transition-colors shadow-md"
-            >
-              Get Free Estimate
-            </a>
-          </nav>
-        </div>
-      </div>
+      {/* Elevated full-screen mobile menu */}
+      <MobileMenu
+        open={isOpen}
+        shown={shown}
+        onClose={() => setIsOpen(false)}
+        navLinks={navLinks}
+      />
     </header>
   );
 }
