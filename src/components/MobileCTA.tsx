@@ -1,11 +1,7 @@
-import { Phone, MapPin, FileText } from "lucide-react";
-
-const MAPS_DIR =
-  "https://www.google.com/maps/dir/?api=1&destination=" +
-  encodeURIComponent("350 State Street Bldg 2B, Wadsworth, OH 44281");
+import { Phone, FileText } from "lucide-react";
 
 // Elevated floating action bar: a blurred dark capsule that stands off the edge
-// with a big shadow. Glassy Call + Directions, plus a glowing brand-blue primary
+// with a big shadow. Glassy Call, plus a glowing brand-blue primary
 // "Free Estimate" with sheen sweep on hover and active press scale.
 export default function MobileCTA() {
   return (
@@ -20,14 +16,6 @@ export default function MobileCTA() {
           className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-white/10 py-3.5 text-sm font-semibold uppercase tracking-wide text-white transition-all active:scale-95"
         >
           <Phone size={18} className="text-[#8fb8e0]" /> Call
-        </a>
-        <a
-          href={MAPS_DIR}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-white/10 py-3.5 text-sm font-semibold uppercase tracking-wide text-white transition-all active:scale-95"
-        >
-          <MapPin size={18} className="text-[#8fb8e0]" /> Directions
         </a>
         <a
           href="/#estimate"

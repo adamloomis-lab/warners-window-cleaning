@@ -2,9 +2,6 @@ import { useEffect } from "react";
 import { X, Phone, MapPin, Clock, ArrowRight, Facebook } from "lucide-react";
 
 const LOGO_URL = "/images/warners-logo.webp";
-const MAPS_DIR =
-  "https://www.google.com/maps/dir/?api=1&destination=" +
-  encodeURIComponent("350 State Street Bldg 2B, Wadsworth, OH 44281");
 const FACEBOOK_URL = "https://www.facebook.com/yourcleanwindows/";
 
 export interface MobileMenuProps {
@@ -115,14 +112,9 @@ export default function MobileMenu({ open, shown, onClose, navLinks }: MobileMen
           </div>
 
           <div className="mt-auto pt-10 space-y-3 text-white/70 text-sm">
-            <a
-              href={MAPS_DIR}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-3 hover:text-white"
-            >
+            <div className="flex items-center gap-3">
               <MapPin size={18} className="text-[#8fb8e0] shrink-0" /> Serving Wadsworth & NE Ohio
-            </a>
+            </div>
             <p className="flex items-center gap-3">
               <Clock size={18} className="text-[#8fb8e0] shrink-0" /> Mon to Fri, 8:00 AM - 5:00 PM
             </p>
