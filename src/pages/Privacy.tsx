@@ -19,7 +19,7 @@ export default function Privacy() {
       <h2>Information We Collect</h2>
       <p>
         We collect information you voluntarily provide through our estimate-request and contact
-        forms — such as your name, phone number, email address, street address, the service you
+        forms, such as your name, phone number, email address, street address, the service you
         are interested in, and details about your project. We may also collect basic,
         non-identifying technical data (such as browser type and pages visited) to help us
         improve our website.

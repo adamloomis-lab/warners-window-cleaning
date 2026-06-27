@@ -17,7 +17,7 @@ export default function OurStory() {
             <div className="rounded-2xl overflow-hidden shadow-xl">
               <img
                 src={WADSWORTH_IMG}
-                alt="Downtown Wadsworth, Ohio — the community Warner's Window Cleaning has served since 1975"
+                alt="Downtown Wadsworth, Ohio, the community Warner's Window Cleaning has served since 1975"
                 className="w-full h-auto object-cover aspect-[16/10]"
                 loading="lazy"
               />
@@ -47,7 +47,7 @@ export default function OurStory() {
             </h2>
             <div className="space-y-4 text-[#1A1A1A] text-lg leading-relaxed">
               <p>
-                Warner's Window Cleaning has been brightening homes in Wadsworth since 1975 when Dennis Warner founded the company on one belief — do exceptional work and treat every customer like family.
+                Warner's Window Cleaning has been brightening homes in Wadsworth since 1975 when Dennis Warner founded the company on one belief: do exceptional work and treat every customer like family.
               </p>
               <p>
                 In 2024, Jeff and Justin Maurer, a father and son team, took over with deep respect for that legacy. They bring the same dedication to quality and customer care that has defined Warner's for nearly five decades.

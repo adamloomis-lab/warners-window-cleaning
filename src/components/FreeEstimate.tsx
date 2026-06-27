@@ -15,7 +15,7 @@ const SERVICE_OPTIONS = [
   "Screen cleaning",
   "Skylight cleaning",
   "Multiple services (describe below)",
-  "Not sure yet — please advise",
+  "Not sure yet, please advise",
 ] as const;
 
 const schema = z.object({
@@ -109,7 +109,7 @@ export default function FreeEstimate() {
               Get Your Free Estimate
             </h2>
             <p className="text-lg text-[#1A1A1A]/80 mb-8 leading-relaxed">
-              Ready for streak-free windows? Fill out the form and we'll get back to you within 24 hours. Or reach out directly — we'd love to hear from you.
+              Ready for streak-free windows? Fill out the form and we'll get back to you within 24 hours. Or reach out directly. We'd love to hear from you.
             </p>
 
             <div className="space-y-4">

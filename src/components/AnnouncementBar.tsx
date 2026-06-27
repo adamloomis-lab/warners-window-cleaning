@@ -18,7 +18,7 @@ export default function AnnouncementBar() {
         ) : (
           <span className="text-white/90">{message}</span>
         )}
-        <span className="hidden sm:inline text-white/40">—</span>
+        <span className="hidden sm:inline text-white/40">•</span>
         <a
           href="tel:3302031654"
           className="inline-flex items-center gap-1.5 font-semibold hover:text-[#1A5EA8] transition-colors"

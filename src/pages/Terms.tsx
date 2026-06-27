@@ -32,7 +32,7 @@ export default function Terms() {
 
       <h2>Intellectual Property</h2>
       <p>
-        All content on this site — including text, logos, graphics, and photographs — is the
+        All content on this site, including text, logos, graphics, and photographs, is the
         property of {BUSINESS.legalName} or its licensors and may not be copied, reused, or
         redistributed without our written permission.
       </p>
