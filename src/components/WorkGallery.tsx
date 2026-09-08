@@ -28,8 +28,18 @@ const galleryImages = [
     label: "On the Job",
   },
   {
+    src: "/images/onsite-blue-ranch-screens.jpg",
+    alt: "Warner's ladder and freshly washed screens leaning against a blue ranch home mid-job",
+    label: "On the Job",
+  },
+  {
     src: "/images/home-stone-arched.jpg",
     alt: "Stone home with arched windows and clean blue sky overhead",
+    label: "Residential",
+  },
+  {
+    src: "/images/home-stucco-sunroom.jpg",
+    alt: "Gray stucco cottage with a wraparound bank of sunroom windows, freshly cleaned",
     label: "Residential",
   },
   {
@@ -55,6 +65,11 @@ const galleryImages = [
   {
     src: "/images/home-blue-twostory.jpg",
     alt: "Blue and gray two-story home with bay window, freshly cleaned",
+    label: "Residential",
+  },
+  {
+    src: "/images/home-brick-twostory.jpg",
+    alt: "Brick two-story home with a half-round garage window and clean front windows on a sunny morning",
     label: "Residential",
   },
   {
